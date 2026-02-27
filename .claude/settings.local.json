@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install 2>&1 | tail -5)",
+      "Bash(npm run build 2>&1)",
+      "WebSearch",
+      "WebFetch(domain:gta.fandom.com)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:www.rockstargames.com)",
+      "WebFetch(domain:x.com)",
+      "WebFetch(domain:www.ozbargain.com.au)",
+      "WebFetch(domain:www.gtabase.com)",
+      "WebFetch(domain:www.teamcherry.com.au)",
+      "WebFetch(domain:sourcesoundvr.com)",
+      "WebFetch(domain:arcraidershub.com)",
+      "WebFetch(domain:www.drawpie.com)",
+      "WebFetch(domain:www.ubisoft.com)",
+      "WebFetch(domain:steamcommunity.com)",
+      "WebFetch(domain:blog.playstation.com)",
+      "WebFetch(domain:9to5toys.com)",
+      "WebFetch(domain:hypebeast.com)",
+      "WebFetch(domain:news.xbox.com)",
+      "WebFetch(domain:gamerant.com)",
+      "WebFetch(domain:www.bandainamcoent.com)",
+      "WebFetch(domain:www.turtlebeach.com)",
+      "WebFetch(domain:www.pcgamesn.com)",
+      "WebFetch(domain:dragon-quest.org)",
+      "WebFetch(domain:www.callofduty.com)",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:store.steampowered.com)",
+      "WebFetch(domain:cdn.akamai.steamstatic.com)",
+      "WebFetch(domain:www.nintendo.com)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:www.techradar.com)",
+      "WebFetch(domain:archive.org)",
+      "WebFetch(domain:www.gamespot.com)",
+      "WebFetch(domain:kotaku.com)",
+      "WebFetch(domain:www.engadget.com)"
+    ]
+  }
+}

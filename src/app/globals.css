@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; padding: 0; margin: 0; }
+
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: #0d1117;
+    color: #e6edf3;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  ::selection {
+    background: rgba(0, 170, 255, 0.3);
+    color: #fff;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #0d1117; }
+  ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #00aaff; }
+}
+
+@layer components {
+  /* ── Category tags ─────────────────────────────────────────────── */
+  .gi-tag {
+    @apply inline-block px-2 py-0.5 text-xs font-bold uppercase tracking-wider rounded;
+  }
+  .gi-tag-games    { @apply gi-tag bg-blue-500 text-white; }
+  .gi-tag-reviews  { @apply gi-tag bg-purple-600 text-white; }
+  .gi-tag-nieuws   { @apply gi-tag bg-cyan-500 text-white; }
+  .gi-tag-tech     { @apply gi-tag bg-emerald-500 text-white; }
+  .gi-tag-hardware { @apply gi-tag bg-amber-500 text-white; }
+  .gi-tag-video    { @apply gi-tag bg-red-500 text-white; }
+  .gi-tag-breaking { @apply gi-tag bg-red-600 text-white; }
+
+  /* ── Section headers ───────────────────────────────────────────── */
+  .gi-section-title {
+    @apply flex items-center gap-3 mb-6;
+  }
+  .gi-section-title-bar {
+    @apply w-1 h-6 rounded-full bg-gradient-to-b from-[#00aaff] to-[#7c3aed];
+  }
+  .gi-section-title h2 {
+    @apply text-xl font-black text-white uppercase tracking-wide;
+  }
+
+  /* ── Cards ─────────────────────────────────────────────────────── */
+  .gi-card {
+    @apply bg-[#1c2333] rounded-xl overflow-hidden border border-[#30363d]
+           transition-all duration-200
+           hover:-translate-y-1 hover:border-[#00aaff]/40 hover:shadow-[0_8px_32px_rgba(0,170,255,0.12)];
+  }
+
+  /* ── Buttons ───────────────────────────────────────────────────── */
+  .gi-btn-primary {
+    @apply inline-block px-5 py-2.5 rounded-lg font-bold text-sm text-white
+           bg-gradient-to-r from-[#00aaff] to-[#0088cc]
+           hover:from-[#0088cc] hover:to-[#0077bb]
+           transition-all duration-200 shadow-[0_0_20px_rgba(0,170,255,0.2)]
+           hover:shadow-[0_0_28px_rgba(0,170,255,0.35)];
+  }
+
+  /* ── Line clamps ───────────────────────────────────────────────── */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
