@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Article, categoryColors } from '@/data/articles';
+import ImageWithFallback from '@/components/ImageWithFallback';
 
 interface HeroSectionProps {
   article: Article;
@@ -12,13 +12,14 @@ export default function HeroSection({ article }: HeroSectionProps) {
   return (
     <section className="relative w-full h-[72vh] min-h-[500px] max-h-[760px] overflow-hidden">
       {/* Background image */}
-      <Image
+      <ImageWithFallback
         src={article.image}
         alt={article.title}
         fill
         priority
         className="object-cover"
         sizes="100vw"
+        category={article.category}
       />
 
       {/* Multi-layer gradient overlay — purple-to-blue tint + bottom fade */}
@@ -66,7 +67,6 @@ export default function HeroSection({ article }: HeroSectionProps) {
             })}
           </span>
           <span>{article.readTime} min leestijd</span>
-          <span>{article.views.toLocaleString('nl-NL')} views</span>
         </div>
 
         <Link href={`/artikel/${article.slug}`} className="gi-btn-primary">

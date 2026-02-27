@@ -1,9 +1,44 @@
+import type { Metadata } from 'next';
 import { articles, featuredArticle, getMostRead } from '@/data/articles';
 import HeroSection from '@/components/HeroSection';
 import ArticleGrid from '@/components/ArticleGrid';
 import LatestNews from '@/components/LatestNews';
 import Sidebar from '@/components/Sidebar';
+import {
+  buildWebSiteJsonLd,
+  buildOrganizationJsonLd,
+  buildAlternates,
+  BASE_URL,
+} from '@/lib/seo';
 
+// ── Homepage metadata ──────────────────────────────────────────────────────
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Gameinside | Nederlands Gaming Nieuws, Reviews & Tech',
+  },
+  description:
+    'Gameinside is jouw Nederlandse bron voor het laatste gaming nieuws, eerlijke game reviews, tech updates en hardware nieuws. Dagelijks vers gaming content in het Nederlands.',
+
+  alternates: buildAlternates(BASE_URL),
+
+  openGraph: {
+    title: 'Gameinside | Nederlands Gaming Nieuws, Reviews & Tech',
+    description:
+      'Jouw Nederlandse bron voor gaming nieuws, eerlijke reviews, tech en hardware. Dagelijks vers content.',
+    url: BASE_URL,
+    type: 'website',
+    siteName: 'Gameinside',
+    locale: 'nl_NL',
+  },
+
+  twitter: {
+    title: 'Gameinside | Nederlands Gaming Nieuws, Reviews & Tech',
+    description:
+      'Jouw Nederlandse bron voor gaming nieuws, eerlijke reviews, tech en hardware. Dagelijks vers content.',
+  },
+};
+
+// ── Page component ─────────────────────────────────────────────────────────
 export default function HomePage() {
   const mostRead = getMostRead();
   const gridArticles = articles.filter((a) => a.id !== featuredArticle.id).slice(0, 6);
@@ -20,6 +55,16 @@ export default function HomePage() {
 
   return (
     <>
+      {/* ── Structured data ───────────────────────────────────────────── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildWebSiteJsonLd()) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildOrganizationJsonLd()) }}
+      />
+
       <HeroSection article={featuredArticle} />
 
       {/* Breaking ticker */}

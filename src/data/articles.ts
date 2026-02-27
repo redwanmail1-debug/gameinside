@@ -13,7 +13,6 @@ export interface Article {
   image: string;
   isBreaking?: boolean;
   isFeatured?: boolean;
-  views: number;
   readTime: number;
   score?: number;
 }
@@ -24,116 +23,106 @@ export const articles: Article[] = [
   {
     id: 1,
     slug: 'resident-evil-requiem-launch-day-review',
-    title: 'Resident Evil Requiem is er — en het is angstaanjagend goed',
+    title: 'Resident Evil Requiem is er, en het is angstaanjagend goed',
     excerpt:
-      'Capcom lanceert vandaag Resident Evil Requiem, de negende hoofddeel in de legendarische survivalhorrorserie. Met FBI-agente Grace Ashcroft als nieuw gezicht en Leon Kennedy die terugkeert naar Raccoon City, belooft dit de meest ambitieuze RE ooit te worden. Gameinside speelde twaalf uur en is onder de indruk.',
-    content: `Het is zover. Na bijna negen maanden wachten — van de eerste aankondiging op Summer Game Fest tot de dramatische vierde trailer tijdens de State of Play van twee weken geleden — is Resident Evil Requiem eindelijk speelbaar. En wij hebben twaalf uur lang bijna niet durven ademhalen.
+      'Twaalf uur gespeeld. Gordijnen dicht, koptelefoon op, meerdere keren schreeuwend achteruitgeschoven op de bank. Resident Evil Requiem is precies wat de serie nodig had: Grace Ashcroft is een geweldige protagonist, Raccoon City is prachtig eng en de Hollowed-vijanden zijn een nachtmerrie. Onze eerste indruk.',
+    content: `Twaalf uur. Dat is hoelang ik gisternacht speelde voordat mijn ogen te droog werden om door te gaan. Gordijnen dicht, koptelefoon op het maximum en drie keer letterlijk achteruitgeschoven op de bank. Capcom heeft ons al een tijdje niet meer zo bang gemaakt. Dit voelt anders.
 
-**Grace Ashcroft: een hoofdpersoon die je meteen begrijpt**
+**Grace Ashcroft is precies wie de serie nodig had**
 
-Waar Capcom bij eerdere delen lang de tijd nam om de protagonist te introduceren, gooit Resident Evil Requiem je meteen in het diepe. Grace Ashcroft, FBI-agente en forensisch patholoog, arriveert in Raccoon City als onderdeel van een federale taskforce — en binnen het eerste uur is het al grondig misgegaan. Wat Capcom slim doet: Grace heeft een verleden. Ze kent Raccoon City. Ze heeft er gestudeerd. De stad is geen abstract rampengebied voor haar, maar een plek vol herinneringen die nu letterlijk rotten.
+Capcom gooit je meteen het diepe in. Grace is FBI-agente en forensisch patholoog, ze arriveert in Raccoon City als onderdeel van een federale taskforce en binnen het eerste uur is alles al volledig misgelopen. Wat het werkt: Grace kent de stad. Ze heeft er gestudeerd. Raccoon City is geen abstracte rampplek voor haar, maar een plek vol herinneringen die nu letterlijk aan het rotten zijn. Elke kamer is persoonlijk. Elke bekende straatnaam doet pijn.
 
-De wisselwerking tussen Grace en Leon Kennedy — die halverwege het tweede hoofdstuk opduikt als speelbare tweede protagonist — is onverwacht goed geschreven. Leon is ouder, vermoeider en heeft zijn heldenstatus allang achter zich gelaten. De twee kijken vanuit fundamenteel andere perspectieven naar dezelfde verschrikking, en dat zorgt voor een narratieve spanning die Capcom zelden eerder zo goed heeft neergezet.
+Leon Kennedy verschijnt halverwege het tweede hoofdstuk. Eerlijk gezegd was ik er even niet blij mee, want Leon voelt de laatste jaren een beetje als franchise-mascotte. Maar Capcom doet iets slims: hij is ouder, moe en heeft absoluut geen zin meer in helden spelen. De dynamiek tussen hem en Grace is scherper geschreven dan ik had verwacht. Ze kijken vanuit totaal andere perspectieven naar hetzelfde inferno.
 
-**Raccoon City zoals je het nog niet eerder hebt gezien**
+**Raccoon City ziet er verdomd goed uit**
 
-De stad zelf is de ware ster. Capcom heeft jaren gewerkt aan de Raccoon City-reconstructie en dat is te zien: het Wrenwood Hotel, de ondergrondse rioleringen, het verlaten politiebureau — elk gebied voelt uniek, dreigend en doordacht ontworpen. De nieuwe Veritas-engine, die al indruk maakte in de RE4-remake, wordt hier tot het uiterste gedreven. Lichteffecten die door gebarsten ramen vallen, details op texturen die je doet vergeten dat dit fictie is, en een geluidsontwerp dat Dolby Atmos absoluut vereist.
+De Veritas-engine was al indrukwekkend in de RE4-remake maar wordt hier keihard gepusht. Elk gebroken raam werpt lichtbundels die stofdeeltjes in de lucht verlichten. Texturen op vochtige muren zijn zo gedetailleerd dat je even vergeet dat dit geen echte locatie is. Het Wrenwood Hotel in hoofdstuk drie is een aaneenschakeling van prachtige nachtmerries. Elke gang anders, elk kamertje een verrassing.
 
-De nieuwe vijanden — Capcom noemt ze Hollowed — zijn een geslaagde evolutie van het klassieke zombie-concept. Ze bewegen onregelmatig, reageren op geluid en licht, en hebben frustrerend menselijke reacties op verwondingen. In onze speelsessie zaten we meermaals doodstil op de bank in de hoop dat een Hollowed die rondpatrouilleerde ons niet zou zien.
+De Hollowed zijn een verademing. Ze bewegen verkeerd. Niet het langzame hersenloos-gesjofel van klassieke zombies maar schokkerige, insectachtige kantelbewegingen die diep ongemakkelijk zijn. Ze reageren op geluid en licht. Ik zat op een punt letterlijk doodstil op de bank terwijl er eentje drie meter van mijn schuilplaats rondpatrouilleerde. Mijn hart bonsde.
 
-**Wat maakt Requiem anders dan de rest?**
+**Even voor de eerlijkheid**
 
-Resident Evil Requiem combineert de actie-drive van RE4 met de beklemming van RE7 en het verhaalgewicht van RE2 Remake. Het voelt als de synthese van alles wat Capcom de afgelopen tien jaar heeft geleerd. De dual-protagonist structuur — waarbij je soms kiest welk perspectief je volgt — geeft spelvrijheid zonder het tempo te breken.
+De eerste anderhalf uur is bewust langzaam. Capcom wil je het tempo laten voelen. Ik begrijp de keuze maar had wat mij betreft tien minuten eerder aan het stuur mogen staan. En een paar omgevingsraadsels zijn zo klassiek RE dat je ze als fan in je slaap oplost. Kleine punten voor een groot spel.
 
-Er zijn kleine punten van kritiek. De eerste anderhalf uur is het spel voorzichtig traag met zijn horror — een bewuste keuze die niet iedereen zal aanspreken. En sommige omgevingsraadsels voelen vertrouwd voor wie de series kent. Maar dit zijn muggenzifterijen in wat tot nu toe een buitengewone ervaring is.
+**Eerste indruk**
 
-**Gameinside's eerste oordeel**
-
-Resident Evil Requiem is veelbelovend op een manier die we al jaren niet meer hebben gevoeld bij een grote release. Capcom levert. Onze volledige review verschijnt over het weekend wanneer we het spel hebben uitgespeeld — maar als de tweede helft bijhoudt wat de eerste belooft, kijken we naar een sterke kandidaat voor Game of the Year 2026.`,
+Resident Evil Requiem belooft iets wat ik de afgelopen jaren bij weinig grote releases heb gevoeld: dat een studio echt op zijn best is. Onze volledige review verschijnt dit weekend zodra ik het spel heb uitgespeeld. Maar als de tweede helft een fractie bijhoudt van wat de eerste belooft, is dit een stevige kandidaat voor Game of the Year 2026. Dat zeg ik je.`,
     category: 'games',
     categoryLabel: 'Games',
     author: 'Thomas van der Berg',
     date: '2026-02-27',
-    image: 'https://cdn.akamai.steamstatic.com/steam/apps/3764200/header.jpg',
+    image: 'https://img.youtube.com/vi/M6gXJoN8RNk/maxresdefault.jpg',
     isFeatured: true,
     isBreaking: true,
-    views: 52840,
     readTime: 6,
   },
 
   {
     id: 2,
     slug: 'phil-spencer-verlaat-microsoft-asha-sharma-nieuwe-xbox-baas',
-    title: 'Phil Spencer verlaat Microsoft na 38 jaar — Asha Sharma neemt het roer over',
+    title: 'Phil Spencer verlaat Microsoft na 38 jaar: Asha Sharma neemt het roer over',
     excerpt:
-      'In een verrassende zet heeft Phil Spencer aangekondigd dat hij na 38 jaar Microsoft verlaat. Sarah Bond, president van Xbox, vertrekt ook. De nieuwe baas is Asha Sharma, tot nu toe hoofd van Microsoft\'s CoreAI-divisie. Wat betekent dit voor Xbox, Game Pass en de Nederlandse gamers?',
-    content: `Het nieuws sloeg in als een bom. Op donderdag 20 februari maakte Phil Spencer via een persoonlijk bericht op Xbox Wire bekend dat hij Microsoft verlaat. Na 38 jaar bij het bedrijf, waarvan de laatste jaren als CEO van Microsoft Gaming, gaat hij met pensioen. Tegelijkertijd kondigt Sarah Bond, de president van Xbox, haar vertrek aan. Het tijdperk-Spencer is voorbij.
+      'Phil Spencer is weg bij Microsoft. Na 38 jaar, het reddingplan voor Xbox en de meest ambitieuze studio-overnamestrategie in gaming-geschiedenis, gaat hij met pensioen. Sarah Bond vertrekt ook. De nieuwe baas is Asha Sharma, hoofd van CoreAI. Wij zijn eerlijk gezegd nerveus.',
+    content: `Het nieuws sloeg in op een donderdag en ik las het bericht twee keer voordat het echt doorkwam. Phil Spencer, 38 jaar bij Microsoft, CEO van Xbox Gaming en de man die Xbox letterlijk uit het puin heeft opgebouwd, gaat weg. Sarah Bond ook. In één klap is het tijdperk voorbij.
 
-**Het einde van een tijdperk**
+**Laten we eerlijk zijn over wat Spencer heeft gedaan**
 
-Phil Spencer heeft Xbox letterlijk gered. Toen hij in 2014 de leiding overnam was Xbox One een commercieel en imagodebacle. Spencer keerde het tij: hij kocht studio's op, lanceerde Game Pass, sloot de Activision Blizzard-deal en positioneerde Xbox als een platform-agnostisch gaming-ecosysteem. Zijn nalatenschap is enorm — ook al hebben de studio-overnames niet altijd de games opgeleverd die iedereen hoopte.
+Ik had vrienden die hun Xbox One in 2013 direct na E3 verkochten vanwege de DRM-controverse en de verplichte Kinect. Diezelfde vrienden abonneren nu al jaren op Game Pass. Dat draai je niet zomaar terug; dat doe je door systematisch vertrouwen te herstellen. Spencer deed dat. Hij kocht studio's op, communiceerde eerlijk over mislukkingen, lanceerde Game Pass en herdefinieerde Xbox als ecosysteem in plaats van doosje.
 
-Zijn vertrek voelt desondanks abrupt. Spencer zei zelf in zijn afscheidsbrief dat hij Satya Nadella al in het najaar van 2025 had verteld dat hij aan een volgend hoofdstuk dacht. De timing — midden in een cruciale periode voor Xbox en vlak voor de aankondiging van nieuwe hardware — roept vragen op die Microsoft vooralsnog niet beantwoordt.
+Zijn nalatenschap is wel messy, laten we dat niet vergeten. Studio-overnames die niet altijd de AAA-blockbusters opleverden die iedereen hoopte. Halo Infinite. Concord. De eerste Game Pass-jaren met weinig echt grote first-party pareltjes. Maar de richting klopte, en dat is meer dan je van de meeste corporate gaming-figuren kunt zeggen.
 
-**Asha Sharma: wie is de nieuwe Xbox-baas?**
+**Asha Sharma. Oké dan.**
 
-Asha Sharma is voor veel gamers een onbekende naam, maar binnen Microsoft is ze een erkende kracht. Ze leidde de CoreAI-divisie, Microsoft's afdeling voor AI-productontwikkeling, en heeft bewezen dat ze grote consumentenproducten kan bouwen. In haar eerste verklaring beloofde ze dat Xbox "relevant, eerlijk en vindingrijk" zal blijven — en dat er geen "soulless AI slop" in games zal verschijnen.
+Ze is hoofd CoreAI geweest bij Microsoft, de afdeling voor AI-productontwikkeling. Grote consumentenproducten bouwen, dat kan ze. Voor 99% van de gaming-gemeenschap is ze een onbekende naam. In haar eerste statement beloofde ze dat er geen "soulless AI slop" in Xbox-games komt. Interessante formulering voor een AI-divisiebaas. Bijna alsof ze weet dat dit haar eerste test is.
 
-Die laatste opmerking is opmerkelijk: ze reageert daarmee direct op een van de grootste zorgen in de gaming-gemeenschap. Of die belofte standhoudt zodra de kwartaalcijfers tegenvallen, zal de tijd uitwijzen.
+Wat me het meeste stoort is de timing. Midden in een cruciale periode voor Xbox, vlak voor hardware-aankondigingen, terwijl Sony en Nintendo allebei in sterke periodes zitten. Spencer heeft Nadella al in het najaar van 2025 verteld dat hij aan iets nieuws dacht. Prima. Maar had je niet kunnen wachten tot er iets van een duidelijke overdracht was?
 
-**Wat betekent dit voor Nederlandse Xbox-gamers?**
+**Wat dit betekent**
 
-Game Pass blijft het kloppende hart van Xbox's strategie, en Sharma heeft bevestigd dat ze er volledig achter staat. Maar de vraag is hoe de nieuwe koers er onder haar leiding uitziet. Minder nadruk op het bouwen van eigen AAA-blockbusters en meer inzet op AI-gedreven tools en diensten? Dat zou voor gamers voelen als een stap achteruit.
+Game Pass blijft. Sharma heeft het meteen bevestigd. Maar de content-strategie eronder is een ander verhaal. Minder nadruk op grote risicovolle single-player ervaringen en meer inzet op AI-tools en diensten? Dat klinkt als precies wat niemand wil maar wat de spreadsheets mogelijk wel gaan dicteren.
 
-**Gameinside's oordeel**
-
-Spencer verdiende meer lof dan hij vaak kreeg. Zijn vertrek voelt voorbarig en de timing is ongelukkig. We hopen dat Sharma bewijst dat Xbox ook zonder zijn architect zijn identiteit behoudt — maar we zijn eerlijk gezegd zenuwachtig.`,
+Spencer verdiende meer lof dan hij ooit heeft gekregen. Zijn vertrek voelt voorbarig. Ik hoop dat Sharma me het ongelijk bewijst, maar ik ben niet optimistisch.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
     author: 'Sophie Bakker',
     date: '2026-02-20',
-    image:
-      'https://xboxwire.thesourcemediaassets.com/sites/2/2026/01/201408_Base-Event-Announce_3840x2160_01-d74edda15b45247820b4.jpg',
+    image: 'https://img.youtube.com/vi/OhTHiVhqcKQ/maxresdefault.jpg',
     isBreaking: true,
-    views: 39200,
     readTime: 5,
   },
 
   {
     id: 3,
     slug: 'nioh-3-review-team-ninja-soulslike',
-    title: 'Nioh 3 review — Team Ninja toont opnieuw waarom ze meesters zijn in het genre',
+    title: 'Nioh 3 review: Team Ninja toont opnieuw waarom ze meesters zijn in het genre',
     excerpt:
-      'Na Nioh 2 leek de lat onmogelijk hoog te liggen. Nioh 3 gooit het over een andere boeg: kies je eigen stijl als Samurai of Ninja, verken uitgestrekte open gebieden en vecht zij aan zij met vrienden in de nieuwe 3-speler co-op. Gameinside besteedde 55 uur aan deze klapper.',
-    content: `Team Ninja heeft ons de afgelopen tien jaar laten zien dat zij het Soulslike-genre op een geheel eigen manier begrijpen. Nioh en Nioh 2 waren keihard, technisch uitdagend en rijker in systemen dan haast elk ander spel in het genre. Nioh 3 is de volgende stap — en het is een groot stap voorwaarts.
+      'Vijfenvijftig uur gespeeld. Tachtig keer gestorven bij één baas (ik telde het niet bij maar het voelde zo). Tweemaal de game uitgespeeld met verschillende stijlen. Nioh 3 is keihard, diep en prachtig gebouwd. De nieuwe co-op voor drie spelers maakt het alleen maar gevaarlijker voor je sociale leven.',
+    content: `Vijfenvijftig uur op de teller en ik heb het gevoel dat ik nog niet eens de helft van het spel gezien heb. Dat is geen kritiek. Nioh 3 is het soort spel waar je je in verliest en dat je drie weken later nog steeds bezighoudt als je eigenlijk met iets anders bezig bent.
 
-**De grote innovatie: jouw stijl, jouw build**
+**Samurai of Ninja: de keuze die alles bepaalt**
 
-Het fundamentele verschil met de voorgaers is de splitising tussen Samurai- en Ninja-stijlen. Bij de start van het spel kies je een hoofdstijl die bepaalt welke vaardigheidsboom je het snelst ontwikkelt, welke uitrusting je het beste past en hoe je vijanden benadert. Kies je voor Samurai: krachtige slagen, zware uitrusting, een repertoire van Ki-aanvallen. Kies je voor Ninja: snel, bedrieglijk, op giftige traps en stealth-eliminaties gebouwd.
+Team Ninja bouwt systemen met een precisie die andere Soulslike-developers zou moeten beschamen. Nioh 3 voegt een fundamentele laag toe die de serie verandert: bij de start kies je niet alleen je wapens maar je complete speelfilosofie. Samurai: krachtige slagen, Ki-aanvallen, je voelt jezelf een wandelend fort. Ninja: snel, bedrieglijk, vergif en stealth-eliminaties die een vijand niet eens merkt.
 
-Beide stijlen zijn volledig uitgewerkt en geen van beide voelt als de "makkelijke" keuze. We hebben allebei geprobeerd en zijn na tien uur omgeschakeld — een bewuste beslissing van Team Ninja, die heeft gezegd dat de game specifiek is ontworpen om twee playthroughs aan te moedigen.
+Ik koos Samurai. Dertig uur gespeeld voor een vriend me overtuigde over te stappen naar Ninja. Die volgende tien uur waren de beste van mijn Nioh-leven. De stijlen spelen zo fundamenteel anders dat het bijna twee games in één zijn. Team Ninja zegt dat het spel bewust is ontworpen voor twee playthroughs. Ik geloof ze volledig.
 
-**Open gebieden: een risico dat uitbetaalt**
+**Die open zones zijn een risico dat grotendeels uitbetaalt**
 
-De meest opvallende structurele verandering is de introductie van open gebieden — niet een open wereld, maar uitgestrekte zones met meerdere missie-ingangen, verborgen shrines en optionele bazen. Dit geeft Nioh 3 een exploratief karakter dat de serie eerder miste. Je kunt uren zoeken naar geheimen of direct naar de hoofdmissie stormen — beide opties worden beloond.
+Nioh was altijd missie-gebaseerd: strakke afgebakende levels met een duidelijk begin en einde. Open zones voelden op papier als een concessie aan de open-wereld trend. In de praktijk werkt het bijna perfect.
 
-Het risico van openheid is dilutie van de kernidentiteit. Team Ninja heeft dat risico bewust genomen en grotendeels goed gemanaged. De open zones zijn rijk genoeg om te verkennen maar compact genoeg om nooit overrompelend te voelen.
+Bijna. De zones zijn uitgestrekt en vol geheimen, maar ze voelen soms wat leeg aan vergeleken met de dichtheid van de eerdere levels. Een shrine vinden na twintig minuten zoeken geeft een heerlijk gevoel van beloning. Twintig minuten door een terrein lopen op weg naar die shrine is minder boeiend. Het is een dunne lijn en Team Ninja struikelt er af en toe over. Maar de goede momenten overtreffen de matige verreweg.
 
-**Co-op voor drie spelers**
+**Co-op voor drie en waarom dat alles verandert**
 
-De uitbreiding van co-op van twee naar drie spelers is een gamechanger. Nioh 3's baasgevechten zijn ontworpen met drie spelers in gedachten: sommige bazen hebben drie aanvalsfasen die gelijktijdig actief worden. Met vrienden erbij worden de gevechten een symfonie van chaos en coördinatie. Solo is het nog steeds volledig speelbaar, maar moeilijker — zoals het hoort.
+De baasgevechten zijn ontworpen met drie spelers in gedachten en dat merk je. Sommige bosses activeren meerdere aanvalsfasen gelijktijdig, waardoor je solo aan het zweten bent terwijl een goed ingespeeld trio een gecoördineerde dans uitvoert. Wij stierven gezamenlijk minstens dertig keer bij de vierde baas voordat we de finishing blow hadden. Het voelde als een overwinning van formaat.
 
-**Gameinside's oordeel**
+**Score: 9/10**
 
-Nioh 3 is de beste game in de serie. De stylistieke keuzevrijheid, de uitgebreide co-op en de schitterende open gebieden tillen het boven zijn voorgangers. Voor fans van het genre is dit verplicht speelgoed.
-
-**Score: 9/10**`,
+Voor fans van het genre is dit verplicht speelgoed. Voor mensen die Nioh nog nooit hebben aangeraakt: begin met deel twee, maar kom hierheen. Team Ninja bouwt de beste actiegames die te weinig mensen bespreken.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
     author: 'Mark Visser',
     date: '2026-02-15',
-    image: 'https://cdn.akamai.steamstatic.com/steam/apps/3681010/header.jpg',
-    views: 28650,
+    image: 'https://img.youtube.com/vi/7dOHBqQfqLY/maxresdefault.jpg',
     readTime: 7,
     score: 9,
   },
@@ -141,39 +130,38 @@ Nioh 3 is de beste game in de serie. De stylistieke keuzevrijheid, de uitgebreid
   {
     id: 4,
     slug: 'god-of-war-sons-of-sparta-alles-wat-we-weten',
-    title: 'God of War: Sons of Sparta — shadow drop van het jaar en alles wat we al weten',
+    title: 'God of War: Sons of Sparta is shadow drop van het jaar en we zijn nog steeds van slag',
     excerpt:
-      'Sony verraste iedereen met een onaangekondigde release tijdens de State of Play: God of War: Sons of Sparta is nu speelbaar op PS5. Een 2D-actiegame over een jonge Kratos die zijn dochter Calliope een verhaal vertelt. Wat is het, hoe speelt het, en is het de moeite waard?',
-    content: `Sony Santa Monica heeft de gaming-wereld op 12 februari letterlijk overvallen. Midden in de State of Play-presentatie — die al rijkelijk was gevuld met aankondigingen — verscheen een trailer die niemand had zien aankomen: God of War: Sons of Sparta. En het spel was meteen beschikbaar. Geen preorder-periode, geen marketingblitz. Gewoon: kopen en spelen.
+      'Sony Santa Monica verscheen midden in de State of Play met een trailer die niemand had zien aankomen en het spel was meteen te kopen. God of War: Sons of Sparta is een 2D-actiegame over een jonge Kratos en het is een liefdesbrief aan de franchise. We gaven het vijf uur van onze avond en hadden geen seconde spijt.',
+    content: `Je kijkt naar de State of Play. Je hebt al wat aardige aankondigingen gezien, een koffie gehaald, lekker achterover gezeten. En dan ineens verschijnt die muziek. Dat thema. Je herkent het meteen en je gaat rechtop zitten. God of War: Sons of Sparta. Nu beschikbaar. Kopen.
 
-**Wat is Sons of Sparta precies?**
+Ik heb het die avond meteen gedaan. Vijf uur later moest ik mezelf dwingen te stoppen.
 
-Sons of Sparta is geen vervolg op Ragnarök en geen prequel op de stijl van 2018's God of War. Het is een 2D-actiegame — een bewuste stijlkeuze die verwijst naar het originele God of War (2005) en zijn opvolgers. Het spel is ontwikkeld door Mega Cat Studios in samenwerking met Santa Monica Studio, hetzelfde team dat eerder de uitstekende Wonder Boy-remakes produceerde.
+**Wat Sons of Sparta precies is**
 
-Het verhaal speelt zich af voor God of War (2005). Een volwassen Kratos vertelt zijn dochter Calliope — die PS4/PS5-gamers kennen uit de verdrietige Chains of Olympus-flashbacks — over zijn tijd als Spartaanse kapitein. Het is een intiem verhaal, kleiner dan de epische godenverhalen waar de serie bekend om staat, en des te indrukwekkender daarvoor.
+Dit is geen vervolg op Ragnarök en ook geen nette prequel in de stijl van 2018. Sons of Sparta is een 2D-actiegame, ontwikkeld door Mega Cat Studios in samenwerking met Santa Monica Studio. Een bewuste stijlkeuze die verwijst naar de originele God of War-trilogie van de PS2-era. Het verhaal speelt voor God of War (2005): een volwassen Kratos vertelt zijn dochter Calliope over zijn tijd als Spartaanse kapitein.
 
-**Hoe speelt het?**
+Calliope. Die naam treft je meteen als je de Chains of Olympus-flashbacks kent. Dit is de Kratos voor de rode man, de Kratos die nog een thuis had en het verloor. En dat maakt elk gevecht zwaarder dan het visueel hoeft te zijn.
 
-De controlemechanismen zijn verrassend vertrouwd voor fans van klassieke 2D-actiegames, maar met een God of War-smaak die onmiskenbaar is. Kratos' Leviathan Axe en Blades of Chaos zijn beide aanwezig en voelen wezenlijk anders aan in het 2D-perspectief. Speciale aanvallen activeer je via Spartan Rage, dat nu als een cooldown-systeem werkt in plaats van een metergestuurde rage-uitbarsting.
+**Hoe speelt het**
 
-De grafische stijl is prachtig: handgetekend maar met moderne details, een stijl die doet denken aan Cuphead gecombineerd met de iconische roodheid van klassieke God of War. Elke baas heeft een unieke visuele taal die je na het gevecht bij blijft.
+Verrassend vertrouwd voor fans van 2D-actiegames, maar onmiskenbaar God of War. De Leviathan Axe en de Blades of Chaos zijn allebei aanwezig en voelen wezenlijk anders aan in het 2D-perspectief. De Spartan Rage werkt nu als een cooldown in plaats van een metersysteem. Het draait soepel en voelt precies goed.
 
-**De aankondiging van de Griekse trilogie-remake**
+De grafische stijl is prachtig. Handgetekend maar met moderne details, ergens tussen Cuphead en de iconische rode esthetiek van het origineel. Elke baas heeft een visuele taal die je bijblijft na het gevecht. De derde baas, een slingerend Gorgon-wezen met een design dat niet lijkt te kloppen maar perfect zit, ga ik niet snel vergeten.
 
-Alsof Sons of Sparta nog niet genoeg nieuws was, kondigde Sony tegelijkertijd aan dat de originele God of War-trilogie (2005, 2007 en 2010) volledig wordt geremastered. Geen details over releasedatum of visuals — Sony zegt alleen dat het "vroeg in ontwikkeling" is — maar het nieuws alleen al is genoeg voor een feestje.
+**En dan die andere aankondiging**
 
-**Gameinside's oordeel**
+Alsof Sons of Sparta nog niet genoeg was: Sony kondigde tegelijkertijd aan dat de originele God of War-trilogie volledig wordt geremastered. Nog geen beelden, nog geen releasedatum, alleen "vroeg in ontwikkeling". Maar dat nieuws alleen al is reden voor een feestje.
 
-Sons of Sparta is een liefdesbrief aan de roots van de franchise en een uitstekend stand-alone avontuur. Het is klein van omvang maar groot van hart. Wij gaven het vijf uur van onze avond en hadden geen seconde spijt.
+**Score: 8.5/10**
 
-**Score: 8.5/10**`,
+Sons of Sparta is klein van omvang maar groot van hart. Een liefdesbrief aan de roots van een franchise die zichzelf al eens heeft heruitgevonden. Als je ooit van God of War hebt gehouden, koop je dit.`,
     category: 'games',
     categoryLabel: 'Games',
     author: 'Thomas van der Berg',
     date: '2026-02-12',
     image:
       'https://blog.playstation.com/tachyon/2026/02/6cce0478459b4f47549fa59e9168f04924295731-scaled.jpg',
-    views: 23900,
     readTime: 5,
     score: 8.5,
   },
@@ -183,35 +171,32 @@ Sons of Sparta is een liefdesbrief aan de roots van de franchise en een uitsteke
     slug: 'gta-6-releasedatum-19-november-2026-bevestigd',
     title: 'GTA 6 heeft nu een definitieve releasedatum: 19 november 2026',
     excerpt:
-      'Na twee uitstellingen en maanden van stilte heeft Rockstar Games eindelijk de nieuwe releasedatum bekendgemaakt. Grand Theft Auto VI verschijnt op 19 november 2026 voor PS5 en Xbox Series X|S. Eerste echte gameplay is ook getoond. Wij analyseren alles.',
-    content: `Rockstar Games heeft op 10 februari 2026 via een formeel persbericht en begeleidende 14 minuten durende gameplay-presentatie de nieuwe releasedatum voor Grand Theft Auto VI bekendgemaakt. Die datum is 19 november 2026 — en dit keer klinkt Rockstar een stuk stelliger dan bij de twee eerdere aankondigingen die beide werden ingetrokken.
+      'Na twee uitstellingen en maanden van bijna-stilte heeft Rockstar Games eindelijk een nieuwe datum bekendgemaakt: 19 november 2026. En dit keer kwamen er veertien minuten echte gameplay bij. Vice City ademt. Lucia rijdt. Het ziet er waanzinnig uit. We analyseren alles.',
+    content: `Twee uitstellingen, maanden van stilte, en nu dit. Rockstar Games maakte op 10 februari via een persbericht en een veertien minuten durende gameplay-presentatie de nieuwe datum bekend: 19 november 2026. En ditmaal klinkt Rockstar anders dan bij de twee eerdere aankondigingen die allebei werden ingetrokken. Stelliger. Zekerder.
 
-**De weg hiernaartoe**
+Ik ben voorzichtig optimistisch. En dat zeg ik als iemand die zijn hype al tweemaal heeft ingetrokken.
 
-Het is geen geheim dat GTA VI een roerige ontwikkeling heeft gehad. De eerste trailer in december 2023 creëerde een golf van hype die moeiteloos YouTube-records verbrak. Maar het spel zou in 2025 verschijnen en werd eerst uitgesteld naar voorjaar 2026, en daarna opnieuw naar november 2026. Rockstar ontsloeg in diezelfde periode 30 medewerkers die intern campagne voerden voor een vakbond — een stap die in de bredere gaming-industrie veel kritiek opleverde.
+**De gameplay-beelden zijn ronduit indrukwekkend**
 
-De sfeer op kantoor bij Rockstar North, zo berichtten meerdere bronnen aan gaming-outlets, had een dieptepunt bereikt. Toch zegt Rockstar dat de game klaar is voor 19 november. We gaan het zien.
+Veertien minuten Vice City. Lucia Caminos en Jason Duval rijden door drukke winkelstraten van Leonida, duiken een casino-overval in en ontvluchten vervolgens de politie via het wateroppervlak van de haven. Het ziet er verbazingwekkend goed uit.
 
-**Wat toont de gameplay-presentatie?**
+Wat me het meeste treft: de stad ademt echt. NPC's hebben een eigen routine ongeacht wat jij uitspookt. Een klant loopt een kapperszaak in. Een straatartiest speelt trompet bij een fontein. De skyline weerspiegelt in plassen op straat. Als dit het werkelijke eindproduct is en geen geselecteerde marketingdemo, dan heeft Rockstar alles waargemaakt wat ze ooit hebben beloofd. Maar dat is een grote als.
 
-Veertien minuten Vice City. Lucia Caminos en Jason Duval rijden in gestolen auto's, snijden door drukke winkelstraten in Leonida, duiken een casino-overval in en ontvluchten de politie via het wateroppervlak van de Vice City-haven. Het is indrukwekkend — en dat is het zacht uitgedrukt.
+**De geschiedenis tot nu**
 
-De stad ademt. NPC's houden hun dagelijkse routine aan ongeacht wat jij doet. Klanten lopen een kapperszaak in. Een straatartiest speelt trompet. De reflecties in plassen op straat tonen omgekeerde skyline-details. Als dit daadwerkelijk het eindproduct is — en niet een geselecteerde marketingdemonstatie — dan heeft Rockstar alles waargemaakt wat ze beloofden.
+GTA VI werd publiek bekend gemaakt in december 2023 met een trailer die YouTube-records brak. Het spel zou in 2025 uitkomen. Eerste uitstel: voorjaar 2026. Tweede uitstel: november 2026. Ondertussen ontsloeg Rockstar 30 medewerkers die intern campagne voerden voor een vakbond. Dat zijn de feiten, en het spel heeft er een moeilijk traject op zitten.
 
-**Is het wachten het waard?**
+**Wat ik denk**
 
-Dat is de vraag die elke GTA-fan zichzelf stelt. We zijn nu meer dan drie jaar verder na de eerste aankondiging. De hype is getransformeerd van onbeheersbare opwinding naar uitgeputte verwachting. Maar als die veertien minuten gameplay indicatief zijn voor de eindversie, dan is het antwoord simpelweg: ja.
+Ik geloof Rockstar deze keer. De gameplay ziet er compleet uit, november is traditioneel de sterkste releaseperiode voor grote titels, en de zakelijke druk is enorm na al het uitstelgedoe. Dat gezegd: GTA VI wordt ofwel het beste spel ooit gemaakt, ofwel de grootste gaming-teleurstelling van het decennium. Een tussenweg is er niet.
 
-**Gameinside's verwachting**
-
-We geloven Rockstar deze keer. De gameplay ziet er compleet uit, de release zit nu in het vierde kwartaal — traditioneel de sterkste periode voor grote releases — en de zakelijke druk is enorm. GTA VI wordt ofwel het beste spel ooit gemaakt, ofwel de grootste teleurstelling in gaming-geschiedenis. Er is geen tussenweg.`,
+Wachten maar. Weer.`,
     category: 'games',
     categoryLabel: 'Games',
     author: 'Thomas van der Berg',
     date: '2026-02-10',
     image: 'https://img.youtube.com/vi/QdBZY2fkU-0/maxresdefault.jpg',
     isBreaking: true,
-    views: 47100,
     readTime: 5,
   },
 
@@ -220,65 +205,69 @@ We geloven Rockstar deze keer. De gameplay ziet er compleet uit, de release zit 
     slug: 'nintendo-switch-2-beste-games-2026',
     title: 'Nintendo Switch 2: dit zijn de beste games die nog komen in 2026',
     excerpt:
-      'Mario Tennis Fever, Hollow Knight: Silksong, Metroid Prime 4 Beyond en meer — het Nintendo Switch 2-jaar is nog maar net begonnen en de line-up ziet er al veelbelovend uit. Gameinside zet alle aankomende releases op een rij en geeft zijn eigen verlanglijst.',
-    content: `De Nintendo Switch 2 is nu vier maanden oud en heeft al bewezen een systeem te zijn dat zowel casual als hardcore gamers in vervoering brengt. Mario Kart World bij launch, Donkey Kong Bananza als verrassende hit — het begin was sterk. Maar wat staat er nog op de planning voor de rest van 2026?
+      'De Switch 2 is vier maanden oud en de line-up voor de rest van het jaar begint serieus te worden. Silksong eindelijk bevestigd. Metroid Prime 4 nadert. Mario Tennis Fever ziet er tof uit. En wij hebben nog een verlanglijst die Nintendo maar beter snel kan afwerken.',
+    content: `Vier maanden Switch 2 in huis en ik moet zeggen: Nintendo doet het goed. Mario Kart World bij launch was geweldig, Donkey Kong Bananza was de verrassing die niemand zag aankomen. Maar nu wil ik weten wat er nog aankomt. Want er staat nogal wat op de planning.
 
-**Mario Tennis Fever — zomer 2026**
+**Mario Tennis Fever (zomer 2026)**
 
-Mario Tennis is lange tijd een serie geweest die zijn potentieel nooit volledig waarmaakte. Mario Tennis Aces had goede intenties maar miste diepgang. Fever gooit het over een andere boeg: fullscreen multiplayer voor acht spelers, een uitgebreide storycampagne en een competitieve online ladder die Camelot naar eigen zeggen volledig heeft herontworpen. De beelden zien er uitstekend uit — heldere kleuren, vlotte animaties en een nieuw "Fever Break"-systeem dat sterk lijkt op tennisversie van Mario Kart's blauwe schild.
+Mario Tennis is een serie die zijn potentieel nooit echt heeft waargemaakt. Mario Tennis Aces op de originele Switch had goede intenties maar miste diepgang op de lange termijn. Fever gooit het over een andere boeg: acht-speler multiplayer op volledig scherm, een uitgebreide storycampagne eindelijk en een online ladder die Camelot volledig heeft herontworpen.
 
-**Hollow Knight: Silksong — lente 2026**
+Het nieuwe Fever Break-systeem lijkt op een tennisvariant van Mario Kart's blauwe schild: het kan alles omgooien op het meest ongelegen moment. Ik ben er ofwel dol op, ofwel word ik er gefrustreerd door. Waarschijnlijk allebei.
 
-Het meest besproken spel op dit platform — en waarschijnlijk van welk platform dan ook — is eindelijk bevestigd voor Switch 2. Team Cherry heeft bevestigd dat Silksong op alle platforms gelijktijdig verschijnt, inclusief een speciaal geoptimaliseerde Switch 2-versie met langere batterijduur en 60fps in handheld-modus. Na acht jaar wachten is de release van Silksong voorzien voor ergens in de lente. We hopen het.
+**Hollow Knight: Silksong (lente 2026)**
 
-**Metroid Prime 4: Beyond — Q3 2026**
+Het is eindelijk bevestigd. Team Cherry heeft Silksong voor alle platforms tegelijkertijd bevestigd, inclusief een Switch 2-versie met 60fps in handheld-modus en langere batterijduur. Na acht jaar wachten, honderden memes en zoveel aankondiging-geruchten die nergens op uitliepen.
 
-Het meest aangekondigde maar minst getoonde spel op de Switch 2-launch. Metroid Prime 4: Beyond was al jaren in ontwikkeling en is nu een Switch 2-exclusive. Retro Studios heeft weinig gameplay laten zien, maar wat we hebben gezien ziet er visueel indrukwekkend uit. Samus keert terug naar de duistere, atmosferische first-person gameplay van de originele trilogie.
+Lente 2026. Ik houd ze aan die belofte.
 
-**Gameinside's verlanglijst**
+**Metroid Prime 4: Beyond (Q3 2026)**
 
-Naast de bevestigde games hopen wij op: een nieuw Star Fox-spel (al tien jaar stilte), een verrassende Pokémon Legends-aankondiging en de lang verwachte Switch 2-versie van Breath of the Wild's opvolger, Tears of the Kingdom. Nintendo houdt de kaarten dicht tegen de borst, maar heeft bewezen dat de Switch 2 een platform is dat de moeite waard is.`,
+Het vaakst aangekondigde maar minst getoonde spel van de Switch 2-launch. Retro Studios heeft weinig gameplay laten zien, maar wat er is ziet er visueel sterk uit. Samus is terug in de duistere atmosferische first-person wereld van de originele trilogie. Als dit ook maar half zo goed is als Metroid Prime 1, zijn we geslaagd.
+
+**Mijn verlanglijst**
+
+Naast de bevestigde games wil ik graag een nieuw Star Fox-spel, want er is al meer dan tien jaar niets van die franchise geweest. Een aankondiging voor Pokémon Legends 2. En als Nintendo écht aardig is: een verrassing-shadow-drop die niemand had verwacht. Nintendo heeft dat kunstje eerder uitgehaald. Doe het gewoon nog een keer.`,
     category: 'games',
     categoryLabel: 'Games',
     author: 'Lisa Jansen',
     date: '2026-02-08',
     image:
       'https://assets.nintendo.com/image/upload/q_auto/f_auto/c_fill,w_1200/ncom/en_US/articles/2025/nintendo-switch-2-to-be-released-in-2025/1920x1080_WN_PR01162025',
-    views: 18400,
     readTime: 5,
   },
 
   {
     id: 7,
     slug: 'dragon-quest-vii-reimagined-review',
-    title: 'Dragon Quest VII Reimagined review — een legendarische RPG voor een nieuwe generatie',
+    title: 'Dragon Quest VII Reimagined review: een legendarische RPG voor een nieuwe generatie',
     excerpt:
-      'Square Enix heeft een van de meest ambitieuze RPGs uit 2000 volledig herschreven. Betere graphics, een vernomen vocatie-systeem en een gestroomlijnd verhaal maken Dragon Quest VII Reimagined toegankelijker dan ooit. Maar verliest het daarmee ook zijn eigenzinnige charme?',
-    content: `Dragon Quest VII: Fragments of the Forgotten Past was al in 2000 een anomalie: een RPG van 100+ uur op de PlayStation 1 met een trage beginopbouw, een complexe verhaalstructuur en een vocatie-systeem dat uren vergt om te begrijpen. Het was een gamers-game — voor liefhebbers van het genre, niet voor beginners. Reimagined probeert dat te veranderen zonder de kern van wat VII zo uniek maakt te verliezen.
+      'Dragon Quest VII was in 2000 al een anomalie: een RPG van 100+ uur die je moest verdienen. Reimagined maakt het toegankelijker zonder de ziel te verliezen. Maar sommige dierbare dingen zijn anders dan ze waren. En dat doet toch een beetje pijn.',
+    content: `Dragon Quest VII: Fragments of the Forgotten Past was altijd al een bijzonder geval. Een RPG van ruim honderd uur op de PS1, met een begin dat zo traag op gang komt dat nieuwe spelers er vaak na drie uur mee ophielden. Een vocatie-systeem dat je uren bestudeerde voor je het doorhad. En toch: voor wie doorzette was het een van de meest emotioneel rijke RPG-ervaringen die het genre heeft voortgebracht.
 
-**Wat is er veranderd?**
+Reimagined wil die ervaring openen voor een breder publiek. Dat is grotendeels gelukt.
 
-De meest zichtbare verbetering is visueel. Reimagined gebruikt de zogenaamde Diorama-engine die Square Enix introduceerde in Dragon Quest XII, en het resultaat is verbluffend: figuren en omgevingen zien eruit als bewegende miniatuurwereldjes in een kristallen bol. De stijl combineert de klassieke Akira Toriyama-esthetiek (inmiddels geërfd door zijn opvolgers) met moderne lichteffecten en architectonische details.
+**Wat Square Enix heeft veranderd**
 
-Het vocatie-systeem is fundamenteel herschreven. In het origineel kostte het je soms tien uur voordat je je eerste baan kon kiezen. In Reimagined kun je al na drie uur met klassen beginnen. De diepgang is behouden — er zijn nog steeds 30+ vocaties en tientallen combo-paden — maar de drempel is drastisch verlaagd.
+Visueel is het verschil spectaculair. De nieuwe Diorama-engine laat werelden eruitzien als levende miniaturen in een kristallen bol. Akira Toriyama's esthetiek leeft voort in zijn opvolgers en de stijl zit goed: kleurrijk, expressief, met moderne lichteffecten die details uitlichten die je anders zou missen.
 
-Het verhaal is ingekort en gestructureerd. Het originele VII had soms episodes die aanvoelden als zijpaden. Reimagined heeft die ingekort of verwijderd en de hoofdlijn strakker gemaakt. Fans van het origineel zullen zien dat sommige geliefd detailverhalen zijn weggelaten — een ingreep die pijn doet, maar begrijpelijk is.
+Het vocatie-systeem is herschreven en dat is een goede zaak. In het origineel kon het tien uur duren voordat je je eerste baan kon kiezen. In Reimagined zit je al na drie uur in je eerste klasse. De diepgang is er nog steeds, er zijn meer dan dertig vocaties en tientallen combo-paden, maar de drempel is verlaagd. Dat is precies de juiste keuze.
 
-**Wat is hetzelfde gebleven?**
+Het verhaal is ingekort en strakker gemaakt. Hier voelt het verdriet. Een paar van de episodische eilandverhalen die fans het meest dierbaar zijn hebben plaatsgemaakt voor een strakkere hoofdlijn. Begrijpelijk. Noodzakelijk misschien. Maar als je met de originele versie bent opgegroeid, merk je de afwezigheid en het steekt.
 
-De kern: Dragon Quest VII is een verhaal over herstel. Eilanden die versteend zijn in het verleden worden stap voor stap bevrijd, elk met een eigen geschiedenis en menselijke drama. Die episodische structuur — elk eiland als een in zichzelf afgeronde minitragedy — is onveranderd en nog steeds buitengewoon effectief. Wij huilen bij Dragon Quest VII-momenten meer dan bij welk modern AAA-spel ook.
+**Wat er nooit verandert**
 
-**Gameinside's oordeel**
+De kern van Dragon Quest VII is een verhaal over herstel. Versteende eilanden worden stap voor stap bevrijd, elk met een eigen menselijk drama dat je soms op de meest onverwachte momenten treft. Die episodische structuur, elk eiland een afgeronde kleine tragedie, is volledig intact.
 
-Dragon Quest VII Reimagined is de beste manier om een van de beste RPGs ooit te spelen. Het mist een paar dierbare originele details, maar geeft er toegankelijkheid en technische pracht voor terug. Voor nieuwkomers: onmisbaar. Voor fans van het origineel: verplichte kost, met enige nostalgie-injectie vereist.
+Ik huil bij Dragon Quest VII-momenten meer dan bij welk modern AAA-spel ook. Dat is niet veranderd.
 
-**Score: 8.5/10**`,
+**Score: 8.5/10**
+
+Voor nieuwkomers is dit de beste manier om een van de beste RPGs ooit te spelen. Voor fans van het origineel: ga erin met de verwachting dat sommige dierbare momenten weg zijn. Maar wat er overblijft is nog steeds buitengewoon.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
     author: 'Nina Hoekstra',
     date: '2026-02-05',
-    image: 'https://cdn.akamai.steamstatic.com/steam/apps/2499860/header.jpg',
-    views: 12300,
+    image: 'https://cdn.akamai.steamstatic.com/steam/apps/742120/header.jpg',
     readTime: 6,
     score: 8.5,
   },
@@ -286,37 +275,38 @@ Dragon Quest VII Reimagined is de beste manier om een van de beste RPGs ooit te 
   {
     id: 8,
     slug: 'nieuwe-xbox-hardware-2026-geruchten-specs',
-    title: 'Nieuwe Xbox hardware onderweg — wat weten we al over de volgende console?',
+    title: 'Nieuwe Xbox hardware is onderweg: wat weten we al?',
     excerpt:
-      'Asha Sharma, de nieuwe CEO van Microsoft Gaming, beloofde in haar eerste grote interview dat er "snel significante hardware-aankondigingen" komen. Geruchten over een Xbox Series X-opvolger, een handheld en een vernieuwd Xbox Cloud-apparaat circuleren al maanden. Gameinside zet alles op een rij.',
-    content: `De Xbox-scene is in beweging. Phil Spencer is weg, Asha Sharma is de nieuwe CEO en een van haar eerste publieke uitspraken was dat er "binnenkort hardware-nieuws" komt. Dat voelt als een directe reactie op de successen van de PlayStation 5 Pro en de Nintendo Switch 2 — en op de dalende Xbox-verkopen in Europa.
+      'Asha Sharma beloofde in haar eerste grote interview "snel significante hardware-aankondigingen". Geruchten over een Xbox-opvolger met 20 teraflops, een handheld en een goedkope Cloud Box rijden al weken rond. We zetten alles op een rij en zeggen eerlijk wat we denken.',
+    content: `Asha Sharma is er nog maar net en ze heeft al laten weten dat er hardware-nieuws aankomt. "Binnenkort" is haar woord. Na maanden van stilte en dalende Xbox-verkopen in Europa is dat precies wat de Xbox-fanbase wil horen. De vraag is: wat komt er precies?
 
-**Het Xbox Series X-opvolger-gerucht**
+**Kestrel: de Xbox Series X-opvolger**
 
-Volgens bronnen bij Digital Foundry en Tom Henderson (bekroond als meest betrouwbare Xbox-leaker) werkt Microsoft aan een nieuwe console met codenaam "Kestrel". De specs die circuleren zijn indrukwekkend: AMD RDNA 4-GPU met 20 teraflops aan rekenkracht, NVMe 2.0 SSD met 12GB/s leessnelheid en 24GB GDDR7-geheugen. Dat zou Kestrel aanzienlijk krachtiger maken dan de PlayStation 5 Pro.
+Bronnen bij Digital Foundry en Tom Henderson, niet bepaald iemand die natte-vinger-geruchten verkoopt, beschrijven een console met codenaam "Kestrel". De specs die circuleren: AMD RDNA 4-GPU met 20 teraflops rekenkracht, NVMe 2.0 SSD met 12 GB/s leessnelheid en 24 GB GDDR7-geheugen. Dat is significant krachtiger dan de PS5 Pro.
 
-De geplande verkoopprijs zou rond de €599 liggen — hetzelfde als de PS5 Pro bij launch. Microsoft's boodschap zou zijn: meer power, zelfde prijs, plus Game Pass inbegrepen.
+Geplande prijs zou rond de 599 euro liggen, hetzelfde als de PS5 Pro bij launch. Microsoft's boodschap: meer kracht, zelfde prijs, plus Game Pass inbegrepen. Als dat klopt is dat een sterk verhaal voor hardware-enthousiasten.
 
 **De Xbox handheld**
 
-Minstens even interessant is het gerucht over een Xbox-handheld. Al tijdens zijn laatste jaar heeft Phil Spencer gezegd dat een draagbare Xbox "niet ver weg" is. Bronnen beschrijven een apparaat dat gelijkenissen vertoont met de Steam Deck, maar dieper geïntegreerd is met Xbox Cloud Gaming en Game Pass. Theoretisch kun je hiermee elke Xbox-game spelen zonder dat ze lokaal geïnstalleerd hoeven te zijn.
+Eerlijk gezegd is dit het gerucht waar ik het meeste in geloof. Phil Spencer zei in zijn laatste jaar als Xbox-baas dat een draagbare Xbox "niet ver weg" was. Meerdere bronnen beschrijven een apparaat dat lijkt op de Steam Deck maar dieper geïntegreerd is met Xbox Cloud Gaming. Je kunt er theoretisch elke Xbox-game op spelen zonder lokale installatie.
 
-**Xbox Cloud Box**
+Dat is een interessante propositie tegenover de Steam Deck en de Switch 2. Als de prijs klopt en de software-bibliotheek via de cloud direct beschikbaar is, heeft Microsoft hier iets.
 
-Een derde apparaat dat circuleert is een goedkope "Cloud Box" van rond de €199, primair bedoeld voor streaming. Denk aan een HDMI-dongle met Xbox-branding die Game Pass Ultimate vereist. Dit zou Microsoft's poging zijn om Xbox in meer huiskamers te krijgen zonder dure hardware.
+**De goedkope Cloud Box**
 
-**Gameinside's verwachting**
+Een HDMI-dongle met Xbox-branding voor zo'n 199 euro, puur voor streaming met Game Pass Ultimate als vereiste. Dit zou Microsoft's manier zijn om Xbox in meer huiskamers te krijgen zonder dure hardware. Slim in theorie. Maar streaming-only apparaten hebben een track record van matige adoptie.
 
-We geloven dat de Xbox handheld het meest concrete gerucht is. Microsoft moet reageren op de Switch 2 en de Steam Deck — en dat ze dat via een eigenhandig apparaat doen in plaats van software-licenties is slim. De Xbox Series X-opvolger valt voorlopig buiten het bereik van de gewone consument qua prijs, maar de krachtige specs spreken de hardware-enthousiasten aan.
+**Wat ik verwacht**
 
-Wij hopen op een aankondiging in Q2 2026. Asha Sharma heeft gezegd: binnenkort. We houden haar aan die belofte.`,
+De handheld is het meest concrete gerucht en ook het meest logische antwoord op de Switch 2 en Steam Deck. Microsoft moet ergens reageren, en dat doe je beter met eigen hardware dan met licenties aan derden.
+
+Sharma heeft gezegd: binnenkort. We houden haar daaraan.`,
     category: 'tech',
     categoryLabel: 'Tech',
     author: 'Kevin de Groot',
     date: '2026-02-01',
     image:
       'https://xboxwire.thesourcemediaassets.com/sites/2/2026/01/012635_Base-Event-Post-Show_3840x2160_03-1ff4ad3f691eb6b547a2.jpg',
-    views: 16700,
     readTime: 5,
   },
 
@@ -325,135 +315,149 @@ Wij hopen op een aankondiging in Q2 2026. Asha Sharma heeft gezegd: binnenkort. 
   {
     id: 9,
     slug: 'clair-obscur-expedition-33-wint-9-game-awards',
-    title: 'Clair Obscur: Expedition 33 wint 9 Game Awards — meer dan Baldur\'s Gate 3 in 2023',
+    title: 'Clair Obscur: Expedition 33 wint 9 Game Awards, meer dan Baldur\'s Gate 3 ooit deed',
     excerpt:
-      'Het kleine Franse studio Sandfall Interactive heeft de gaming-industrie opgeschud. Clair Obscur: Expedition 33 won negen prijzen op The Game Awards 2025, waaronder Game of the Year. Meer dan Baldur\'s Gate 3, meer dan elk AAA-spel in recent geheugen. Hoe is dit mogelijk?',
-    content: `De avond van 12 december 2025 zal de gaming-industrie lang bijblijven. Clair Obscur: Expedition 33 — een debuutspel van een Frans studio met twaalf medewerkers — won negen van de zeventien prijzen op The Game Awards, waaronder Game of the Year, Best RPG, Best Narrative, Best Art Direction en Best Score & Music. Het versloeg Elden Ring: Nightreign, Call of Duty: Black Ops 7 en Nintendo's eigen Mario Kart World.
+      'Een Frans studio van twaalf mensen won negen Game Awards op één avond. Game of the Year, Best RPG, Best Narrative, Best Score. Clair Obscur: Expedition 33 versloeg EA, Activision en Nintendo tegelijkertijd. En het verdiende elke prijs. Dit is hoe gaming eruitziet als het goed gaat.',
+    content: `De avond van 12 december 2025 gaat lang bijblijven. Clair Obscur: Expedition 33, een debuutspel van een Frans studio van twaalf medewerkers, won negen van de zeventien prijzen op The Game Awards. Game of the Year. Best RPG. Best Narrative. Best Art Direction. Best Score and Music.
 
-**Hoe heeft een klein studio de grote namen verslagen?**
+Het versloeg Elden Ring: Nightreign, Call of Duty: Black Ops 7 en Mario Kart World. Tegelijkertijd. Met twaalf man.
 
-Clair Obscur: Expedition 33 is in 2025 de definitie van lightning in a bottle. Het spel combineert turn-based combat met real-time parry-mechanica, een surrealistisch Frans kunstmilieu als setting en een verhaal dat zowel poëtisch als verpletterd persoonlijk aanvoelt. Recensenten noemden het "de Final Fantasy die Square Enix al tien jaar probeert te maken maar nooit lukt".
+**Hoe een studio van twaalf mensen de industrie klopte**
 
-Sandfall Interactive begon als een team van ex-Ubisoft-werknemers die een RPG wilden maken zonder corporate compromissen. Dat gebrek aan compromissen — in gameplay, verhaal en visuele stijl — is precies wat het spel onderscheidt van zijn AAA-concurrenten. Er zijn geen live service-elementen, geen microtransacties, geen "je kunt ook een grotere versie kopen voor €20 meer". Gewoon: een spel, volledig af.
+Sandfall Interactive begon als een groep ex-Ubisoft-medewerkers die een RPG wilden maken zonder corporate compromissen. Geen live service-elementen. Geen microtransacties. Geen "Deluxe Edition voor 20 euro extra met drie skins die je toch niet gebruikt." Gewoon een spel, volledig af, gemaakt door mensen die precies wisten wat ze wilden maken.
 
-**De Nederlandse gaming-gemeenschap reageerde massaal**
+Het resultaat is een turn-based RPG met real-time parry-mechanica, een surrealistische Frans-getinte kunstwereld als setting en een verhaal dat zowel poëtisch als persoonlijk voelt op manieren die je niet verwacht. Recensenten noemden het "de Final Fantasy die Square Enix al tien jaar probeert te maken maar nooit lukt." Dat is hard maar niet oneerlijk.
 
-Op Nederlandse Discord-servers en forums was de reactie overweldigend. #ExpeditionOfTheYear trending op Dutch gaming communities. Nederlandse spelers zijn uitgesproken fans gebleken van het spel's moeilijkheidsgraad — vergelijkbaar met een FromSoftware-game maar met een narratief hart dat je inneemt.
+**Geen compromissen**
 
-**Wat betekent dit voor de industrie?**
+Wat Expedition 33 onderscheidt van zijn AAA-concurrenten is de afwezigheid van alles wat de grote publishers er automatisch bij zouden stoppen. Er is geen pas-op-de-plaats voor een store-page. Geen season pass-aankondiging bij launch. Kopen, spelen, klaar.
 
-The Game Awards-jury heeft met deze beslissing een signaal afgegeven: spelers en critici waarderen authenticiteit boven budgetten. Sandfall Interactive's succes is een inspiratie voor indie-ontwikkelaars wereldwijd — maar ook een waarschuwing aan grote publishers die convenience boven creativiteit plaatsen.
+Op Nederlandse Discord-servers en forums werd het wekenlang besproken, met mensen die screenshots deelden van momenten die hen raakten op een manier die ze niet hadden verwacht. Dat is iets wat grote publishers met budgetten van honderden miljoenen op dit moment nauwelijks weten te realiseren.
 
-**Gameinside's oordeel**
+**Wat het betekent voor de rest**
 
-We hebben Clair Obscur: Expedition 33 uitgebreid gerecenseerd bij release en gaven het een 9.5. De Game Awards-overwinning voelt volledig verdiend. Als je dit nog niet hebt gespeeld: ga nu.`,
+The Game Awards-jury heeft een statement gemaakt: authenticiteit wint van budgetten. Dat is goed nieuws voor iedereen die het gaming-landschap van de komende jaren positief in wil gaan.
+
+We gaven Expedition 33 bij release een 9.5. De Game Awards-overwinning voelt volledig verdiend. Als je dit nog niet hebt gespeeld: nu. Echt nu.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
     author: 'Nina Hoekstra',
     date: '2026-01-25',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/1903340/header.jpg',
-    views: 31200,
     readTime: 5,
   },
 
   {
     id: 10,
     slug: 'ea-overgenomen-55-miljard-saoedisch-consortium',
-    title: 'EA overgenomen voor 55 miljard dollar — wat betekent dit voor FIFA, Sims en Battlefield?',
+    title: 'EA overgenomen voor 55 miljard: wat betekent dit voor FIFA, Sims en Battlefield?',
     excerpt:
-      'Electronic Arts is overgenomen door een Saoedisch-Emirati consortium in de grootste gaming-overname ooit. 55 miljard dollar in contanten. De impact op EA Sports FC, The Sims, Battlefield en Mass Effect is onzeker. Gameinside is bezorgd — en dat leggen we hier precies uit.',
-    content: `Op 18 januari 2026 maakte Electronic Arts via een persconferentie in San Francisco de overname bekend die de gaming-wereld al weken verwachtte maar hoopte dat niet zou plaatsvinden. Een consortium bestaande uit het Saoedische Public Investment Fund en het Abu Dhabi sovereign wealth fund MDI neemt EA over voor $55 miljard in cash. Het is de grootste leveraged buyout in de Wall Street-geschiedenis van entertainment.
+      'Electronic Arts is overgenomen door een Saoedisch-Emirati consortium in de grootste gaming-overname ooit. 55 miljard dollar contant. Gameinside is bezorgd en legt precies uit waarom. En nee, "het wordt vast wel goed" is geen antwoord dat we accepteren.',
+    content: `Op 18 januari 2026 maakte Electronic Arts de overname bekend die de gaming-wereld al weken vreesde maar hoopte dat het niet zou doorgaan. Een consortium van het Saoedische Public Investment Fund en het Abu Dhabi-vermogensfonds MDI neemt EA over voor 55 miljard dollar in contanten. De grootste leveraged buyout in de entertainmentgeschiedenis.
 
-**Hoe is het zover gekomen?**
+Ik ga je niet vertellen dat het vast wel goed komt. Ik denk dat het dat waarschijnlijk niet doet.
 
-EA's positie was al jaren kwetsbaar. Na de controversiële loot-box-praktijken in FIFA Ultimate Team, de herhaalde teleurstellingen van Battlefield 2042 en de stagnerende Sims-franchise had EA's koers jaren stilgestaan. Het consortium, dat al belangen heeft in Newcastle United FC, Formula 1-teams en meerdere Europese gamestudio's, zag een kans.
+**Hoe het zover is gekomen**
 
-CEO Andrew Wilson bleef aan in zijn functie — een bewuste keuze die analisten interpreteren als een poging om de overgang soepel te laten verlopen. Maar de werkelijke beslissingsmacht verschuift naar een raad van commissarissen die primair geïnteresseerd is in return on investment, niet in creatieve vrijheid.
+EA's positie was al jaren kwetsbaar. De loot-box-controverses rondom FIFA Ultimate Team. Battlefield 2042 dat een commercieel debacle was bij launch. De Sims die al tien jaar op zijn plek stampt. De aandelenkoers die halveerde in twee jaar. Het consortium zag een ondergeprijsd IP-portfolio met wereldwijde naamsbekendheid en sloeg toe.
 
-**Wat verandert er voor EA's grote franchises?**
+CEO Andrew Wilson blijft aan. Dat wordt gepresenteerd als stabiliteit maar is waarschijnlijk gewoon een overgangsmechanisme om de onrust te dempen. De werkelijke beslissingsmacht ligt nu bij mensen wier primaire belang financieel rendement is, niet gamedesign-integriteit.
 
-Voor EA Sports FC (voorheen FIFA) verandert er waarschijnlijk weinig op korte termijn: de melkkoe blijft melkkoe. The Sims heeft een moeilijker positie — de franchise trekt minder international publiek dan EA Sports FC, maar heeft een immense loyale fanbase. Battlefield 6 verkocht beter dan zijn voorganger, wat ruimte geeft. Mass Effect — nog altijd in ontwikkeling bij BioWare — is het meest kwetsbaar voor bezuinigingen.
+**Wat er verandert voor de grote franchises**
 
-**Gameinside's bezorgdheid**
+EA Sports FC hoeft zich geen zorgen te maken. De melkkoe blijft melkkoe, waarschijnlijk met nog meer monetization-opties zodra de nieuwe eigenaren hun stempel zetten. The Sims heeft een moeilijker positie: een trouwe maar kleinere fanbase die niet de internationale schaal heeft die deze investeerders gewend zijn. Battlefield 6 verkoopt goed en heeft even rust. Mass Effect bij BioWare is het meest kwetsbaar: een niche IP in langdurige ontwikkeling is precies het soort project dat soevereine vermogensfondsen ongeduldig maakt.
 
-We zijn eerlijk: we zijn niet optimistisch. Soevereine vermogensfondsen investeren in media voor culturele invloed en financieel rendement — niet voor gamedesign-integriteit. De kans dat EA's games meer pay-to-win worden, meer gefocust op korte-termijn inkomsten en minder gericht op creatieve risico's, is reëel.
+**Wat mij het meeste zorgen baart**
 
-Voor Nederlandse gamers die FIFA en Sims al jaren spelen: jullie kunnen het beste blijven spelen wat jullie al hebben, en alternatieve studios in de gaten houden. Want dit scenario eindigt zelden goed voor de speler.`,
+Soevereine vermogensfondsen investeren in media voor culturele invloed en financieel rendement. Niet voor gamedesign-integriteit. De kans dat EA's games onder dit eigenaarschap meer pay-to-win worden, minder creatief risico durven nemen en meer gericht zijn op korte-termijn inkomsten is reëel.
+
+Ik wil ongelijk hebben. Echt. Maar de geschiedenis wijst een andere kant op.
+
+Voor Nederlandse EA-gamers: speel wat je hebt en houd alternatieven in de gaten. Dit scenario eindigt zelden goed voor de speler.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
     author: 'Sophie Bakker',
     date: '2026-01-18',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/2669320/header.jpg',
     isBreaking: true,
-    views: 24800,
     readTime: 5,
   },
 
   {
     id: 11,
     slug: 'ubisoft-tencent-deal-nieuw-gaming-filiaal',
-    title: 'Ubisoft en Tencent sluiten deal — maar wat verandert er echt voor fans?',
+    title: 'Ubisoft en Tencent sluiten deal, maar wat verandert er echt voor fans?',
     excerpt:
-      'Na jaren van tegenvallende verkopen en een dramatisch dalende beurskoers heeft Ubisoft een strategische deal gesloten met Tencent. Een gezamenlijk gaming-filiaal, meer nadruk op service-games en een beloofd nieuw Assassin\'s Creed-universum. Maar is dit redding of langzaam verdrinking?',
-    content: `Ubisoft en Tencent zijn geen onbekenden. De Chinese techgigant had al een belang van 9,9% in de Franse gamepublisher. Maar de deal die op 12 januari 2026 werd aangekondigd gaat verder: een gezamenlijk filiaal dat specifiek wordt opgericht voor de ontwikkeling van nieuwe gaming-IP's en uitbreiding van bestaande franchises naar de Chinese en Aziatische markt.
+      'Na jaren van tegenvallende verkopen en een halverende beurskoers heeft Ubisoft een strategische deal gesloten met Tencent. Een gezamenlijk gaming-filiaal en een beloofd nieuw Assassin\'s Creed-universum. Is dit redding of verdrinking in slow motion? Wij zijn sceptisch.',
+    content: `Ubisoft en Tencent kennen elkaar al een tijdje. De Chinese techgigant had al 9,9% belang in de Franse gamepublisher. Maar de deal die op 12 januari 2026 werd aangekondigd gaat verder: een gezamenlijk filiaal voor de ontwikkeling van nieuwe IP's en uitbreiding van bestaande franchises naar Aziatische markten.
 
-**De context: Ubisoft in vrije val**
+Ik ga je niet vertellen dat ik hier goed van word.
 
-Om te begrijpen waarom Ubisoft dit heeft gedaan, moet je kijken naar de recente teleurstellingen. Skull and Bones na zes jaar ontwikkeling en een "AAAA-game"-belofte werd een commerciële mislukking. Assassin's Creed: Shadows miste aanvankelijk zijn releasedatum en werd met gemixte reacties ontvangen. De aandelenkoers halveerde in twee jaar. Ubisoft stond voor een keuze: verkopen of herstructureren. Ze kozen voor herstructurering — met Tencent als partner.
+**De context: Ubisoft was er slecht aan toe**
 
-**Wat brengt Tencent mee?**
+Om te begrijpen waarom Ubisoft dit heeft gedaan, kijk je naar de recente teleurstellingen. Skull and Bones kostte zes jaar ontwikkeling, werd aangeprezen als "AAAA-game" en werd een commerciële mislukking van de bovenste plank. Assassin's Creed: Shadows miste zijn releasedatum en haalde gemengde reviews. De beurskoers halveerde in twee jaar.
 
-Tencent is de grootste gamebedrijf ter wereld qua omzet. Ze hebben belangen in Riot Games, Epic Games, Supercell en tientallen andere studios. Hun expertise ligt in free-to-play games, mobile gaming en het schaalbaar maken van IP's voor wereldwijde markten. Voor Ubisoft betekent deze deal toegang tot de Chinese markt op een manier die het bedrijf nooit eerder heeft gehad.
+Ubisoft stond voor een keuze: verkopen of herstructureren. Ze kozen voor herstructurering met Tencent als partner. Ik begrijp de logica. Dat betekent niet dat ik er blij mee ben.
 
-**Het nieuwe Assassin's Creed universum**
+**Wat Tencent meebrengt**
 
-De meest concrete aankondiging uit de deal is een nieuw Assassin's Creed "multi-platform universum" — een combinatie van spellen, films, series en mobiele games die Tencent en Ubisoft samen gaan bouwen. Details zijn schaars, maar geruchten wijzen op een AAA-open-wereld AC-game in feudaal Japan (voortbordurend op Shadows), een free-to-play multiplayer-game en een Netflix-serie.
+Tencent is het grootste gamebedrijf ter wereld qua omzet. Ze hebben belangen in Riot, Epic, Supercell en tientallen andere studios. Hun expertise: free-to-play, mobile en het schaalbaar maken van IP's voor wereldwijde markten. Voor Ubisoft betekent dit toegang tot de Chinese markt op een schaal die ze nooit eerder hadden.
 
-**Gameinside's oordeel**
+Maar kijk naar wat er met westerse studio's onder Tencent-invloed is gebeurd. League of Legends bleef goed. Fortnite bleef goed. De pattern is dat ze niet ingrijpen als de machine draait. De vraag is wat er gebeurt als hij niet draait.
 
-We zijn sceptisch. Tencent's betrokkenheid bij Riot Games en andere westerse studio's heeft zelden geleid tot betere single-player ervaringen — eerder het tegenovergestelde. De kans dat Ubisoft met deze deal meer service-games gaat maken ten koste van verhaalgedreven single-player avonturen is groot. Maar: als de alternatief faillissement was, is dit de minst slechte optie.`,
+**Het nieuwe Assassin's Creed-universum**
+
+De meest concrete aankondiging: een nieuw AC "multi-platform universum" van games, films, series en mobile. Geruchten wijzen op een AAA-game in feudaal Japan voortbordurend op Shadows, een free-to-play multiplayer-game en een Netflix-serie.
+
+Drie producten tegelijkertijd. In drie verschillende formaten. Van een studio die al moeite had om één groot spel op tijd af te krijgen. Kom op.
+
+**Mijn oordeel**
+
+Ik ben sceptisch. Tencent's betrokkenheid bij westerse studios heeft zelden geleid tot betere single-player ervaringen. De kans dat Ubisoft meer service-games maakt ten koste van verhaalgedreven avonturen is groot. Maar als het alternatief faillissement was, is dit de minst slechte uitweg. Dat is het positiefste wat ik hierover kan zeggen.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
     author: 'Joost Vermeer',
     date: '2026-01-12',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/3159330/header.jpg',
-    views: 19300,
     readTime: 5,
   },
 
   {
     id: 12,
     slug: 'hollow-knight-silksong-review-eindelijk-gespeeld',
-    title: 'Hollow Knight: Silksong review — 7 miljoen mensen kochten het blind. Ze kregen gelijk.',
+    title: 'Hollow Knight: Silksong review: 7 miljoen mensen kochten het blind. Ze kregen gelijk.',
     excerpt:
-      'Na acht jaar wachten, ontelbare memes en de langstlopende "wanneer?" in gaming-geschiedenis is Hollow Knight: Silksong eindelijk uit. Wij speelden het volledig uit en kunnen zeggen: het was het wachten volledig waard. Dit is een meesterwerk.',
-    content: `Er zijn games die je met verwachtingen speelt, en dan zijn er games waarbij de verwachtingen zo hoog zijn opgeblazen dat geen enkele realistische uitkomst ze kan waarmaken. Hollow Knight: Silksong hoort in de tweede categorie. En toch — somehow — slaagt Team Cherry erin om beide groepen tevreden te stellen.
+      'Acht jaar wachten. Ontelbare memes. Het langstlopende "wanneer?" in gaming-geschiedenis. En dan dit. Team Cherry heeft iets gemaakt dat de verwachtingen overtreft op manieren die ik niet had zien aankomen. Dit is het beste platformgame van het decennium.',
+    content: `Er zijn games die je met hoge verwachtingen speelt. En dan zijn er games waarbij de verwachtingen zo absurd hoog zijn opgeblazen dat geen realistisch eindproduct ze kan waarmaken. Hollow Knight: Silksong hoorde thuis in die tweede categorie.
 
-**Hornet als protagonist: een compleet ander gevoel**
+En toch. Team Cherry heeft het gedaan.
 
-Speel je Hollow Knight dan ben je de stille, langzame Ridder. Speel je Silksong dan ben je Hornet: snel, acrobatisch, agressief. De besturing voelt meteen radicaal anders — Hornet is veel responsiever, haar naald-aanvallen zijn preciezer en haar movekit is complexer. Er duurt geen vijf minuten of je beseft: dit is een nieuw spel, geen DLC.
+**Hornet voelt meteen als een nieuw spel**
 
-De wereld van Pharloom, waar Hornet gevangengezet wordt aan het begin van het verhaal, is een nieuwe realisatie van de Team Cherry-filosofie: betekenisvolle stilte, visuele verhaalvertelling en een lore-gelaagdheid die je uren kunt ontcijferen. Elk NPC heeft een verhaal. Elke kamer heeft een achtergrond. Pharloom voelt groter dan Hallownest en toch intimer door Hornets meer uitgesproken persoonlijkheid.
+De Knight uit het origineel is stil, traag en gewichtig. Hornet is het tegenovergestelde: snel, acrobatisch, agressief. Haar naaldaanvallen zijn preciezer, haar movekit is rijker en de besturing reageert zo direct dat je de eerste minuten even moet wennen aan hoeveel sneller alles gaat.
 
-**De moeilijkheidsgraad: eerlijk maar meedogenloos**
+Vijf minuten spelen en je weet het: dit is geen DLC. Dit is een nieuw spel.
 
-Silksong heeft nieuwe spelers beter in gedachten dan het origineel — er zijn meer checkpoints in de vroege game en het tutorial-systeem is subtiel verbeterd. Maar wie dacht dat Team Cherry milder was geworden: de baasgevechten in de tweede helft van het spel zijn sommige van de moeilijkste in het genre. De eindbaas — die we hier niet spoileren — is een waar spektakel van Game Design op zijn allerhoogste niveau.
+Pharloom, de wereld waar Hornet gevangengezet wordt, is een nieuwe realisatie van de Team Cherry-filosofie. Betekenisvolle stilte. Visueel verteld verhaal. Lore in lagen die je uren kunt ontcijferen als je wilt maar die het spel niet opdringt. Elk NPC heeft een verhaal. Elke kamer heeft een geschiedenis. Pharloom voelt groter dan Hallownest maar toch intiem dankzij Hornets uitgesproken persoonlijkheid.
 
-**Muziek: Christopher Larkin overtreft zichzelf**
+**De moeilijkheidsgraad**
 
-Christopher Larkin's soundtrack voor het originele Hollow Knight was al legendarisch. Zijn werk voor Silksong is beter. De thema's zijn complexer gecomponeerd, de orkestrale momenten zijn groter en emotioneel devasterend. Luister naar de eindcredits track en je begrijpt waarom gamemuziek ook echte muziek is.
+Team Cherry is milder geworden voor beginners in de vroege game. Meer checkpoints, subtielere tutorials. Maar wie dacht dat dit een toegeeflijker spel is geworden: de baasgevechten in de tweede helft zijn sommige van de moeilijkste in het genre.
 
-**Gameinside's oordeel**
+De eindbaas, die ik hier niet spoiler, is een spektakel van game design op zijn allerhoogste niveau. Ik ben er vier keer op gestorven voor ik begreep wat er van me werd gevraagd. En die vierde keer, toen ik het eindelijk snapte, voelde als een persoonlijke overwinning die ik al lang niet meer zo intens had ervaren.
 
-Hollow Knight: Silksong is een meesterwerk. Het is completer, actiever en emotioneel rijker dan zijn voorganger. De acht jaar wachten was pijn — maar het resultaat rechtvaardigt elke seconde.
+**Christopher Larkin's soundtrack**
 
-**Score: 10/10**`,
+Het originele Hollow Knight had al een legendarische soundtrack. Silksong is beter. De thema's zijn complexer gecomponeerd, de orkestrale momenten zijn groter en op twee punten in het spel letterlijk bewogen. Luister naar de eindcredits en je begrijpt waarom gamemuziek ook echte muziek is.
+
+**Score: 10/10**
+
+Het was het wachten waard. Alle acht jaar.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
     author: 'Mark Visser',
     date: '2026-01-05',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/1030300/header.jpg',
-    views: 44900,
     readTime: 7,
     score: 10,
   },
@@ -463,69 +467,75 @@ Hollow Knight: Silksong is een meesterwerk. Het is completer, actiever en emotio
   {
     id: 13,
     slug: 'gta-6-opnieuw-uitgesteld-19-november-2026',
-    title: 'GTA 6 opnieuw uitgesteld naar 19 november 2026 — en Rockstar ontsloeg vakbondswerkers',
+    title: 'GTA 6 opnieuw uitgesteld naar 19 november 2026, en Rockstar ontsloeg vakbondswerkers',
     excerpt:
-      'Grand Theft Auto VI gaat niet in 2025 uit. Rockstar heeft het spel opnieuw uitgesteld, nu naar november 2026. Tegelijkertijd ontsloeg het bedrijf 30 medewerkers die intern campagne voerden voor een vakbond. Gameinside vraagt zich af: wanneer is genoeg genoeg?',
-    content: `Op 20 december 2025 brak het nieuws via Kotaku en later bevestigd door Rockstar zelf: Grand Theft Auto VI wordt wederom uitgesteld. Niet naar begin 2026, niet naar zomer 2026, maar naar 19 november 2026. Het is de tweede keer in twee jaar dat Rockstar een releasedatum mist. En de omstandigheden zijn deze keer bitter.
+      'Grand Theft Auto VI gaat niet in 2025 uit. Rockstar heeft het opnieuw uitgesteld, nu naar november 2026. Tegelijkertijd ontsloeg het bedrijf 30 medewerkers die intern campagne voerden voor een vakbond. Dit is gecompliceerder dan alleen een teleurstelling.',
+    content: `Op 20 december 2025 brak het nieuws via Kotaku, later bevestigd door Rockstar zelf: Grand Theft Auto VI wordt wederom uitgesteld. Naar 19 november 2026. De tweede keer in twee jaar dat een releasedatum niet gehaald wordt.
 
-**De vakbondskwestie**
+Maar het gaat deze keer niet alleen over de vertraging.
 
-Vrijwel gelijktijdig met het uitstelbericht berichtte Kotaku's anonieme bronnen dat Rockstar North — het Edinburghse studio achter de GTA-serie — 30 medewerkers had ontslagen. De reden? Ze hadden intern een informele petitie rondgetuurd voor betere arbeidsomstandigheden en het recht om een vakbond te vormen.
+**De vakbondsontslagen**
 
-Rockstar ontkent dat de ontslagen gerelateerd zijn aan de vakbondscampagne. "Gewone herstructurering", zegt de woordvoerder. Maar de timing is veelzeggend. En in een sector die al jaren worstelt met crunch culture en hoge burn-out percentages, voelt dit als een stap in de verkeerde richting van een bedrijf dat betere verwachtingen wekt.
+Bijna tegelijkertijd berichtte Kotaku op basis van anonieme bronnen dat Rockstar North, het Edinburghse studio achter de GTA-serie, 30 medewerkers had ontslagen. De reden? Ze hadden intern een petitie rondgestuurd voor betere arbeidsomstandigheden en het recht om een vakbond te vormen.
 
-**De morele laag van het uitstel**
+Rockstar ontkent dat de ontslagen verband houden met de vakbondscampagne. "Gewone herstructurering." Maar de timing is veelzeggend. En in een sector die al jaren kampt met crunch-cultuur en hoge burn-out percentages, voelt dit als een bedrijf dat weet waar het mee bezig is en er toch voor kiest.
 
-Dit is de complexiteit van GTA VI: het spel ziet er verbazingwekkend uit. De trailers zijn meesterlijk. De gameplay-beelden overtuigen. Maar de tol die de ontwikkeling eist — van de mensen die het maken — is hoog. Rockstar's "we will release when it's ready"-filosofie klonk jaren geleden nobel; nu voelt het als een dekmantel voor onbeheerd perfectionisme dat menselijke slachtoffers maakt.
+**De morele complexiteit**
 
-**Wat nu voor Nederlandse fans?**
+Dit is de moeilijke kant van GTA VI: het spel ziet er verbazingwekkend goed uit. De trailers zijn meesterlijk. De beloftes zijn reëel. Maar de tol die de ontwikkeling vraagt van de mensen die het maken is hoog, en die tol wordt door tenminste dertig mensen nu anders gevoeld dan ze hadden verwacht.
 
-Wacht. Er is weinig anders te doen. GTA VI wordt — als alles goed gaat — de grootste gamerelease van 2026 en de grootste van het decennium. De hype is echt. Maar de mensenkosten zijn ook echt. Misschien is het goed om dat in gedachten te houden wanneer we straks allemaal commentaar leveren op de review scores.
+Rockstar's "we release when it's ready"-filosofie klonk tien jaar geleden nobel. Nu begint het te klinken als een dekmantel voor onbeheerst perfectionisme dat menselijke kosten heeft.
 
-**Gameinside's standpunt**
+**Wat nu**
 
-We willen GTA VI net zo graag als iedereen. Maar we willen het ook gemaakt door mensen die eerlijk behandeld worden. Rockstar heeft in 2026 de kans om te bewijzen dat de prachtige eindproduct hand in hand kan gaan met betere studio-praktijken. Ze hoeven dit alleen maar te kiezen.`,
+Wachten. Dat is het enige wat je kunt doen. GTA VI wordt, als alles goed gaat, de grootste gamerelease van 2026. De hype is echt. De potentie is echt.
+
+Maar terwijl we straks de reviewscores lezen en het spel bespreken, misschien goed om even stil te staan bij de mensen die het hebben gemaakt. Een paar van hen zijn er inmiddels niet meer bij.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
     author: 'Thomas van der Berg',
     date: '2025-12-20',
     image: 'https://img.youtube.com/vi/VQRLujxTm3c/maxresdefault.jpg',
     isBreaking: true,
-    views: 38600,
     readTime: 5,
   },
 
   {
     id: 14,
     slug: 'call-of-duty-black-ops-7-review-teleurstelling',
-    title: 'Call of Duty: Black Ops 7 review — de meest verwachte teleurstelling van het jaar',
+    title: 'Call of Duty: Black Ops 7 review: de meest verwachte teleurstelling van het jaar',
     excerpt:
-      'Na het succes van Battlefield 6 lag de lat hoog voor Activision. Black Ops 7 levert een degelijke campagne, maar de multiplayer is formuliek en de warzone-integratie voelt geforceerd. Was dit genoeg voor de grote concurrent? Gameinside oordeelt na 25 uur.',
-    content: `Call of Duty heeft een reputatie om te leveren. Black Ops als sub-serie heeft de beste verhaalcampagnes in de franchise en een multiplayer die miljoenen spelers jarenlang bezighoudt. Black Ops 7 beloofde een stap voorwaarts — een nieuw verhaaluniversum, een volledige overhaul van de multiplayer en diepgaandere integratie met Warzone. Niet alles van dat plan is gelukt.
+      'Na het succes van Battlefield 6 lag de lat hoog voor Activision. Black Ops 7 levert een degelijke campagne maar de multiplayer is formulaïsch en de Warzone-integratie voelt als een afterthought. Speel de campagne. Sla de rest over.',
+    content: `Ik ga je niet lang laten wachten op mijn mening: Black Ops 7 is een teleurstelling. Niet een ramp, maar een teleurstelling. En in een jaar waarin Battlefield 6 ons liet zien hoe grootschalige multiplayer-shooters er in 2025 uit kunnen zien, is dat extra zuur.
 
-**De campagne: de enige echte succesfactor**
+**De campagne verdient een eerlijke beoordeling**
 
-De campagne is het beste deel van Black Ops 7. Treyarch heeft een verhaal gebouwd rond een AI-gedreven wapenarsenaal dat de grenzen tussen militair geweld en autonoom oorlogvoeren vervaagt — een thema dat in de huidige technologische realiteit raak voelt. Hoofdpersoon Sgt. Maya Torres is goed geschreven en haar dilemma's zijn authentiek. Vijf tot acht uur gameplay leveren een strakke, spectaculaire ervaring op die niet beschaamd hoeft te zijn naast het beste van Modern Warfare (2019).
+Treyarch heeft een campagne gebouwd rond een AI-gedreven wapenarsenaal dat de grenzen vervaagt tussen militair geweld en autonoom oorlogvoeren. Het thema raakt echt. Hoofdpersoon Sgt. Maya Torres is beter geschreven dan de meeste CoD-protagonisten van de afgelopen jaren, haar dilemma's zijn authentiek en de setpieces zijn spectaculair.
 
-**De multiplayer: comfortabel maar ongeïnspireerd**
+Vijf tot acht uur, afhankelijk van hoe grondig je speelt. Het is het geld waard. Dat is geen kleine loftuiting voor een shooter-campagne.
 
-Hier begint de teleurstelling. De multiplayer van Black Ops 7 voelt als een update van Black Ops 6 in plaats van een nieuwe richting. De nieuwe Kill Confirmed-variant en twee nieuwe Hardpoint-maps zijn leuk, maar onvoldoende om het gebrek aan frisse ideeën te verbloemen. Na Battlefield 6's grote herintroductie van destructible environments en playercount-experimenten voelt de BO7-multiplayer smal.
+Maar dan de multiplayer.
 
-**Warzone-integratie: geforceerd**
+**De multiplayer is een update, geen stap voorwaarts**
 
-Warzone-integratie is dit jaar het zwakste onderdeel. De integratie van de campagne-personages in Warzone voelt als een afterthought. Operators zijn kostbare cosmetische toevoegingen zonder narratieve context. En de Season 1-content die bij launch beschikbaar is, is karig voor een franchise die dit soort monetization als kern van zijn businessmodel heeft.
+Black Ops 7's multiplayer voelt als Black Ops 6 met twee nieuwe maps en een aanvullende modus. De nieuwe Kill Confirmed-variant is leuk. De twee nieuwe Hardpoint-maps zijn goed ontworpen. Maar na Battlefield 6's destructible environments, 128-speler Conquest en de vernieuwde Sector Rush-modus voelt het smal. Eng smal.
 
-**Gameinside's oordeel**
+Er ontbreekt ambitie. Het is veilig en competent en in 2025 is dat gewoon niet genoeg meer.
 
-Call of Duty: Black Ops 7 is geen slecht spel — de campagne is het geld waard. Maar als opvolger van het jaar (na Battlefield 6 die ons allemaal verraste) is het een stap achteruit. Activision moet terug naar de tekentafel voor de multiplayer. Tot dan: speel de campagne, sla de rest over.
+**Warzone: de vergeten vriend**
 
-**Score: 6.5/10**`,
+De Warzone-integratie was een van de verkoopargumenten. Campagne-personages in Warzone, nauwere verbinding tussen de verhalen. In de praktijk voelt het als een afterthought. Operators zijn dure cosmetische toevoegingen zonder narratieve context. De Season 1-content bij launch is karig voor een franchise die live service als kern van zijn businessmodel heeft.
+
+Activision heeft hier niet genoeg werk van gemaakt, en dat is te zien.
+
+**Score: 6.5/10**
+
+Speel de campagne. Sla de rest over. En als je nog snakt naar goede multiplayer: Battlefield 6 staat er nog.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
     author: 'Kevin de Groot',
     date: '2025-12-15',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/3606480/header.jpg',
-    views: 27100,
     readTime: 6,
     score: 6.5,
   },
@@ -533,64 +543,72 @@ Call of Duty: Black Ops 7 is geen slecht spel — de campagne is het geld waard.
   {
     id: 15,
     slug: 'gameprijzen-door-het-dak-sony-microsoft-nintendo',
-    title: 'Gameprijzen door het dak: 80 dollar voor Mario Kart, en niemand stop het',
+    title: 'Gameprijzen door het dak: 80 dollar voor Mario Kart, en niemand stopt het',
     excerpt:
-      'Sony, Microsoft en Nintendo verhoogden allemaal hun game- en hardwareprijzen in 2025. Mario Kart World voor 80 dollar was de druppel die de emmer deed overlopen. November 2025 was de slechtste verkoopmaand voor games since 1995. Gameinside rekent af met de industrie.',
-    content: `Er was een tijd dat een nieuwe game €59,99 kostte en dat als veel werd beschouwd. Die tijd is voorbij. In 2025 bereikten gameprijzen nieuwe hoogtepunten die spelers, critics en zelfs aandeelhouders verontruste. Nintendo zette de toon met Mario Kart World voor $79,99 bij de Switch 2-launch. Sony volgde met $74,99 voor exclusives op de PS5 Pro. Microsoft stelde de Xbox-exclusiveprijs bij naar €69,99 voor first-party titels.
+      'Sony, Microsoft en Nintendo verhoogden allemaal hun prijzen in 2025. Mario Kart World voor 80 dollar was de druppel die de emmer deed overlopen. November 2025 was de slechtste gamingverkoop-maand in dertig jaar. Gameinside rekent af met de industrie en is er klaar mee.',
+    content: `Tachtig euro voor Mario Kart. Ik heb die zin nu al vijf keer getypt en hij blijft raar aanvoelen. Mario Kart. Tachtig euro.
+
+Nintendo zette de toon met Mario Kart World voor 79,99 dollar bij de Switch 2-launch. Sony volgde met 74,99 dollar voor PS5 Pro-exclusives. Microsoft stelde Xbox first-party titels bij naar 69,99 euro. Drie grote spelers, gelijktijdig omhoog, terwijl de markt er eigenlijk niet om vroeg.
 
 **De cijfers liegen niet**
 
-Novembercijfers van de Entertainment Software Association en ISFE bevestigden wat iedereen al aanvoelde: de gameverkoopmaand van november 2025 was de slechtste in dertig jaar, gecorrigeerd voor inflatie. Niet qua aantallen verkochte exemplaren — die zijn stabiel — maar qua nieuwe klanten. De gaming-industrie trekt minder nieuwe spelers aan dan ooit tevoren.
+Novembercijfers van de Entertainment Software Association en ISFE zijn hard: de gamingverkoop van november 2025 was de slechtste in dertig jaar, gecorrigeerd voor inflatie. Niet qua aantallen verkochte exemplaren, die zijn stabiel. Maar qua nieuwe spelers. De industrie trekt minder nieuwe mensen aan dan ooit.
 
-De redenering van de publishers is begrijpelijk op papier: ontwikkelingskosten zijn drastisch gestegen. Een middelgrote AAA-titel kost nu gemiddeld $200-300 miljoen om te maken. Dat moet ergens vandaan komen. Maar de vraag is: van wie?
+De redenering van de publishers ken ik. Ontwikkelkosten zijn door het dak. Een gemiddelde AAA-titel kost 200 tot 300 miljoen dollar. Dat moet ergens vandaan komen. Maar de vraag is: van wie? Van de bestaande loyale kerngamer die toch wel koopt, niet van de casual speler die nu afhaakt.
 
-**Van casual naar core: de demografische verschuiving**
+**De demografische tijdbom**
 
-Het probleem is dat €70-80 per game jonge en casual spelers uitsluit. Mobile gaming en gratis-te-spelen titels pikken die spelers op. De traditionele game-retail verliest haar brede publiek. Wat overblijft is een sector die primair dure spellen verkoopt aan een steeds smaller kernpubliek van enthousiaste volwassenen met beschikbaar inkomen.
+Tachtig euro sluit jonge spelers uit. Het sluit casual spelers uit. Het sluit een hele generatie uit die opgroeit met gratis mobile games en goedkope abonnementen. Mobile gaming en free-to-play pikken die mensen op. De traditionele game-retail houdt ze niet vast.
 
-Nintendo's keuze voor €79,99 bij Mario Kart World heeft bijzonder hard ingeslagen. Mario Kart was traditioneel een familiegame — betaalbaar, breed toegankelijk. Nu vraagt Nintendo €400 voor de hardware en €80 voor het belangrijkste launch-spel. Dat is geen familiegame meer. Dat is een luxeproduct.
+Nintendo's Mario Kart-prijs doet extra pijn omdat Mario Kart altijd een familiegame was. Betaalbaar, breed toegankelijk, de ideale introductie tot gaming voor kinderen. Nu vraag je 400 euro voor de hardware en 80 euro voor het belangrijkste launch-spel. Dat is geen familiegame meer. Dat is een luxeproduct.
 
-**Gameinside's oordeel**
+**Mijn standpunt**
 
-We zijn van mening dat de industrie een strategische fout maakt. Korte-termijn hogere inkomsten per verkocht exemplaar gaan ten koste van de breedte van het publiek op lange termijn. Game Pass, PlayStation Plus en Nintendo Switch Online zijn de juiste richting — niet hogere stukprijzen. De sector heeft zichzelf in de voet geschoten. En het is de speler die de kogel heeft opgevangen.`,
+De industrie maakt een strategische fout. Hogere stukprijzen geven op korte termijn meer inkomsten per verkopen, maar op lange termijn een kleiner publiek. Game Pass, PlayStation Plus en Nintendo Switch Online zijn de juiste richting. Niet prijsverhogingen die casual gamers permanent wegduwen.
+
+De sector heeft zichzelf in de voet geschoten. En het is de gewone speler die dat merkt.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
     author: 'Sophie Bakker',
     date: '2025-12-10',
     image: 'https://img.youtube.com/vi/VrTVeYm4iIM/maxresdefault.jpg',
-    views: 22500,
     readTime: 5,
   },
 
   {
     id: 16,
     slug: 'ai-games-debat-larian-indie-ontwikkelaars',
-    title: 'AI in games: het grote debat van 2025 — wie heeft er gelijk?',
+    title: 'AI in games: het grote debat van 2025. Wie heeft er gelijk?',
     excerpt:
-      'Larian Studios-baas Swen Vincke is positief over AI-tools voor ontwikkelaars. Indie-ontwikkelaars zijn in opstand. Vakbonden waarschuwen voor baanverlies. Gameinside neemt stelling in een debat dat de toekomst van game-ontwikkeling bepaalt.',
-    content: `Swen Vincke, de oprichter van Larian Studios — de makers van Baldur's Gate 3 — deed in december 2025 een statement dat de industrie in twee kampen splitste: "AI-tools voor animatie, textures en NPC-dialogen hebben ons duizenden werkuren bespaard. Zonder die tools was BG3 niet wat het geworden is." Twee dagen later verscheen een open brief ondertekend door 1.200 indie-ontwikkelaars die Vincke's uitspraken "gevaarlijk naïef" noemden.
+      'Larian Studios-baas Swen Vincke is positief over AI-tools voor ontwikkelaars. Indie-ontwikkelaars zijn in opstand. Vakbonden waarschuwen voor baanverlies. Wij nemen stelling in een debat dat de toekomst van game-ontwikkeling bepaalt. En beide kanten hebben een punt.',
+    content: `Swen Vincke, oprichter van Larian Studios en de man achter Baldur's Gate 3, deed in december 2025 een statement dat de industrie in twee kampen splitste. "AI-tools voor animatie, textures en NPC-dialogen hebben ons duizenden werkuren bespaard. Zonder die tools was BG3 niet wat het geworden is."
 
-**Vincke's punt: efficiëntie, niet vervanging**
+Twee dagen later: een open brief ondertekend door 1.200 indie-ontwikkelaars die zijn uitspraken "gevaarlijk naïef" noemden.
 
-Larian's AI-gebruik is specifiek: generatieve tools voor herhalende taken. Texturepatronen genereren op basis van concept art. NPC-reacties uitbreiden op basis van door schrijvers opgegeven kernlijn. Stem-placeholder audio aanmaken voor testing voordat echte voice actors hun werk doen. Vincke is expliciet: "We gebruiken AI om ons team te versterken, niet om mensen te vervangen."
+Beiden hebben gedeeltelijk gelijk. Dat maakt het ingewikkelder, niet makkelijker.
 
-Dat klinkt redelijk — en misschien is het dat ook, in Larians specifieke context. Larian is een groot, winstgevend studio dat zelf beslissingen maakt over zijn tools en teamsamenstelling. Maar de precedent die ze zetten heeft effect op de hele industrie.
+**Vincke's punt is eerlijker dan het klinkt**
 
-**De indie-tegenstem: asymmetrische dreiging**
+Larian's AI-gebruik is specifiek en begrensd. Texturepatronen genereren op basis van concept art. NPC-reacties uitbreiden op basis van door schrijvers opgegeven kernlijnen. Placeholder-audio voor testdoeleinden voordat echte stemacteurs aan de beurt zijn. Vincke is expliciet: het gaat om versterking van het team, niet vervanging.
 
-Kleine studios staan in een fundamenteel andere positie. Wanneer grote publishers — EA, Activision, Ubisoft — AI-tools inzetten om artistieke en schrijfposities te reduceren, is het gevolg niet "meer tijd voor creativiteit" maar "minder banen voor mensen die deze industrie vullen met talent en diversiteit". De open brief citeert tientallen gevallen van AI-gegenereerde concept art die freelance kunstenaars hun opdrachten heeft gekost.
+Dat klinkt redelijk en is in Larian's specifieke context waarschijnlijk ook redelijk. Larian is winstgevend, zelfstandig en maakt bewust de keuze hoe ze tools inzetten. Maar de precedent die ze stellen heeft effect buiten hun eigen muren.
 
-Vakbonden in de VS en VK schatten dat AI tot 2030 30.000 game-sector-banen bedreigt — niet door autonome AI-games, maar door de geleidelijke erosie van ondersteunende creatieve functies.
+**De indie-tegenstem gaat over een ander probleem**
 
-**Gameinside's standpunt**
+Kleine studios staan in een fundamenteel andere positie. Wanneer grote publishers zoals EA, Activision en Ubisoft AI-tools inzetten om artistieke en schrijfposities te reduceren, is het gevolg niet "meer tijd voor creativiteit" maar "minder banen voor de mensen die deze industrie vullen met talent en diversiteit."
 
-AI is niet per definitie kwaad voor games. Tools die ontwikkelaars helpen efficiënter te werken zonder banen te elimineren zijn welkom. Maar de lijn is dun, en de incentive van grote bedrijven is niet de lijn in stand te houden. Vincke heeft gelijk dat AI hem hielp BG3 te maken. De industrie heeft gelijk dat dit een gevaarlijk precedent schept als het zonder kaders wordt overgenomen. Die kaders ontbreken momenteel. Dat is het echte probleem.`,
+De open brief citeert tientallen concrete gevallen van AI-gegenereerde concept art die freelance kunstenaars hun opdrachten heeft gekost. Dat zijn geen abstracte statistieken. Dat zijn mensen met huur en hypotheek. Vakbonden in de VS en VK schatten dat AI tot 2030 30.000 game-sector-banen bedreigt via de geleidelijke erosie van ondersteunende creatieve functies.
+
+**Mijn positie**
+
+AI-tools zijn niet per definitie kwaad voor games. Tools die ontwikkelaars helpen efficiënter te werken zonder banen te elimineren zijn welkom. Maar de lijn is dun en de zakelijke incentive van grote bedrijven is niet die lijn in stand te houden als bezuinigen lucratiever is.
+
+Vincke heeft gelijk dat AI hem heeft geholpen BG3 te maken. De industrie heeft ook gelijk dat dit gevaarlijk wordt als het zonder kaders wordt overgenomen. Die kaders ontbreken momenteel volledig. Dat is het echte probleem, en het is een probleem dat de industrie zelf moet oplossen voordat de politiek het voor ze doet.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
     author: 'Nina Hoekstra',
     date: '2025-12-01',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/1086940/header.jpg',
-    views: 18200,
     readTime: 5,
   },
 
@@ -599,34 +617,37 @@ AI is niet per definitie kwaad voor games. Tools die ontwikkelaars helpen effici
   {
     id: 17,
     slug: 'arc-raiders-review-verrassende-hit-2025',
-    title: 'Arc Raiders review — de meest verrassende hit van 2025 die niemand zag aankomen',
+    title: 'Arc Raiders review: de meest verrassende hit van 2025 die niemand zag aankomen',
     excerpt:
-      'Embark Studios — de makers van The Finals — brachten in oktober 2025 Arc Raiders uit en bijna niemand sprak erover. Tot de mond-tot-mondreclame begon. Bijna 8 miljoen exemplaren in zes weken. Gameinside speelde 30 uur en vertelt je waarom dit spel werkt.',
-    content: `Arc Raiders werd niet verwacht om de hit van het jaar te worden. Embark Studios, de Zweedse developer achter het populaire The Finals, had Arc Raiders al jaren in ontwikkeling, maar door marketingproblemen en een uitgestelde release was het spel onder de radar gebleven. Tot 30 oktober 2025.
+      'Ik had weinig verwachting van Arc Raiders. Een extraction-shooter van de studio achter The Finals, niet bepaald een genre waar ik direct enthousiast van word. En toen speelde ik het dertig uur lang zonder het door te hebben. Hoe doet een spel dat?',
+    content: `Ik moet eerlijk zijn: Arc Raiders stond niet op mijn radar. Embark Studios, de Zweedse developer achter The Finals, had het spel al een tijdje in ontwikkeling maar door marketingproblemen en een verschoven release was het grotendeels onder de radar gebleven. Ik had het aan me voorbij laten gaan als een vriend het niet half-dwingend op mijn scherm had gezet.
 
-**Wat is Arc Raiders precies?**
+Dertig uur later begreep ik het.
 
-Arc Raiders is een extraction-shooter — een genre dat populair is dankzij spellen als Escape from Tarkov en Hunt: Showdown, maar dat nooit echt mainstream is geworden. Embark's bijdrage: maak het genre toegankelijker zonder de kernspanning te verliezen. Je landt met je team op een verwoeste aarde, verzamelt resources en wapens, overleeft aanvallen van de Arc (robotachtige buitenaardse wezens) en andere spelers, en ontsnapt voor de timer afloopt. Sterven betekent alles verliezen.
+**Wat Arc Raiders precies is**
 
-**Waarom werkt het zo goed?**
+Een extraction-shooter. Het genre heeft naam gemaakt via Escape from Tarkov en Hunt: Showdown maar is nooit echt mainstream geworden. Te complex, te punishing, te niche. Embark's missie: maak het genre toegankelijker zonder de kernspanning te verliezen.
 
-Drie redenen. Ten eerste: de spanning is consistent opgebouwd. Arc Raiders calibreert zijn momenten van actie en stilte perfect — tien minuten sluipen door een verlaten fabriek gevolgd door een hartstilstandgevecht met een enorme Arc-behemoth die je geluidsaanwijzingen volgde. Ten tweede: de progression-loop is briljant. Elk item dat je uit een missie haalt geeft je een concreet gevoel van vooruitgang. Ten derde: het teamwork-systeem beloont specialisatie zonder solo-spelers te bestraffen.
+Je landt met een team op een verwoeste aarde, verzamelt resources en wapens, overleeft aanvallen van de Arc (robotachtige buitenaardse vijanden) én andere spelers, en ontsnapt voor de timer afloopt. Sterven betekent alles kwijtraken wat je die sessie hebt gevonden. Dat simpele gegeven is de motor van alles.
 
-**De community-factor**
+**Waarom het zo goed werkt**
 
-Arc Raiders explodeerde op streaming. Streamers vonden in het spel een perfecte combinatie van persoonlijk drama — de stress van bijna verliezen wat je hebt opgebouwd — en community humor. Clipgeweldige momenten, memorabele fails en epische last-second ontsnapppingen maken het ideaal voor content. De mond-tot-mondreclame deed de rest.
+Drie dingen. De spanning is perfect gedoseerd: Arc Raiders calibreert momenten van actie en stilte beter dan bijna elk ander spel in het genre. Tien minuten sluipen door een verlaten fabriek, gevolgd door een hartstilstandgevecht met een enorme Arc-behemoth die je geluidsaanwijzingen volgde. Dan weer stilte. Dan voetstappen van een ander team achter een muur.
 
-**Gameinside's oordeel**
+De progressie-loop is verslavend. Elk item dat je thuis brengt is een tastbare stap vooruit die je hebt verdiend met je eigen huid. En het teamwork-systeem beloont specialisatie zonder solo-spelers te bestraffen, wat een evenwicht is dat moeilijker te bereiken is dan het lijkt.
 
-Arc Raiders is het bewijs dat extractionshooters mainstream kunnen worden als ze correct worden gebalanceerd. Embark heeft iets speciaals gemaakt. Als je van co-op games houdt, is dit nu verplicht speelgoed.
+**De community-explosie**
 
-**Score: 8.5/10**`,
+Arc Raiders explodeerde op streaming. Streamers vonden een perfecte combinatie van persoonlijk drama en clipgeweldige momenten: epische last-second ontsnapppingen, memorabele fails, gevechten die je mond open laten vallen. Acht miljoen exemplaren in zes weken. Niemand had dat voorspeld.
+
+**Score: 8.5/10**
+
+Extraction-shooters kunnen mainstream worden als ze correct worden gebalanceerd. Embark heeft dat bewezen. Als je van co-op games houdt en een beetje spanning verdraagt: verplicht.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
     author: 'Joost Vermeer',
     date: '2025-11-20',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/1808500/header.jpg',
-    views: 15900,
     readTime: 6,
     score: 8.5,
   },
@@ -634,68 +655,72 @@ Arc Raiders is het bewijs dat extractionshooters mainstream kunnen worden als ze
   {
     id: 18,
     slug: 'nintendo-switch-2-snelst-verkochte-console-ooit',
-    title: 'Nintendo Switch 2: 10,36 miljoen stuks in vier maanden — de snelst verkochte console ooit',
+    title: 'Nintendo Switch 2: 10,36 miljoen stuks in vier maanden en de snelst verkochte console ooit',
     excerpt:
-      'Nintendo heeft de verkoopcijfers bekendgemaakt: 10,36 miljoen Switch 2-consoles in vier maanden. Sneller dan elke console voor hem. Is de upgrade de moeite waard voor Nederlandse gamers die nog een originele Switch hebben? Gameinside geeft een eerlijk advies.',
-    content: `Nintendo heeft zijn meest recente kwartaalrapport bekendgemaakt en de Nintendo Switch 2-cijfers zijn indrukwekkend: 10,36 miljoen verkochte exemplaren in vier maanden. Ter vergelijking: de originele Nintendo Switch bereikte zijn eerste 10 miljoen pas in negen maanden. De Wii had er twaalf maanden voor nodig. De Nintendo Switch 2 is, statistisch gezien, de snelst verkochte console in de consumentenelectronicageschiedenis.
+      'Nintendo heeft de verkoopcijfers bekendgemaakt: 10,36 miljoen Switch 2-consoles in vier maanden. Sneller dan de Wii, sneller dan de originele Switch, sneller dan alles wat er voor was. Maar moet jij nu upgraden als je nog een Switch 1 hebt? Ons eerlijke advies.',
+    content: `Nintendo heeft zijn kwartaalcijfers gepubliceerd en de Switch 2 heeft de verkoopcijfers omvergegooid die ik dacht dat nog lang onverslagen zouden blijven. 10,36 miljoen exemplaren in vier maanden. De originele Switch had negen maanden nodig voor die mijlpaal. De Wii had twaalf maanden nodig. De Switch 2 is statistisch de snelst verkochte console ooit.
 
-**Waarom verkoopt de Switch 2 zo goed?**
+En ja, ik ben er een beetje trots op namens Nintendo als jarenlange fan. Is dat raar? Misschien.
 
-Drie factoren spelen een rol. Ten eerste de backward compatibility: alle originele Switch-games zijn speelbaar op de Switch 2, waarvoor het bestaande Switch-libriary van meer dan 4.000 games direct beschikbaar is. Ten tweede de launch-line-up: Mario Kart World, Donkey Kong Bananza en Metroid Prime 4 Beyond zijn drie sterke titels voor een launch. Ten derde de prijs: €449 voor een handheld die ook aan de televisie kan. In vergelijking met de PlayStation 5 Pro (€799) en de nieuwe Xbox (verwacht €599) is dat de meest toegankelijke high-end gaming-optie.
+**Waarom het zo goed loopt**
 
-**Moet je upgraden als Switch 1-eigenaar?**
+Drie factoren spelen een rol. De backward compatibility is enorm: alle originele Switch-games draaien gewoon op de Switch 2, waarmee het bestaande bibliotheek van ruim 4.000 titels direct beschikbaar is. Dat is een gigantisch voordeel tegenover een blanco nieuwe console.
 
-Dit is de vraag die we het meest horen. Ons eerlijke antwoord: het hangt af van hoe je speelt. Als je voornamelijk in tv-modus speelt en je huidige Switch goed functioneert, is er geen urgentie. De verbetering in grafische kwaliteit in tv-modus is merkbaar maar niet generationeel. Als je voornamelijk in handheld-modus speelt: de Switch 2 heeft een 7,9-inch OLED-scherm (tegenover 6,2 inch bij de OLED-Switch) en een aanzienlijk langere batterijduur. Die upgrade voelt wél generationeel.
+De launch-line-up was solide. Mario Kart World, Donkey Kong Bananza en Metroid Prime 4 Beyond zijn drie titels die je niet schaamt tegenover een PS5 Pro. En de prijs van 449 euro is relatief aantrekkelijk naast de PS5 Pro op 799 euro en de verwachte Xbox-opvolger op zo'n 599 euro.
 
-**De Dutch gaming community over de Switch 2**
+**De grote vraag: moet jij upgraden?**
 
-In onze enquête onder 2.400 Nederlandse gamers geeft 68% aan "tevreden tot zeer tevreden" te zijn met de Switch 2. De belangrijkste kritiekpunten: de €80 launch-prijs voor Mario Kart World en de beperkte beschikbaarheid van consoles in de eerste zes weken na launch.
+Dit is wat we het meeste horen van Nederlandse lezers. Ons eerlijke antwoord: het hangt ervan af.
+
+Speel je voornamelijk op de tv en werkt je Switch nog goed? Geen urgentie. De grafische verbetering in tv-modus is merkbaar maar niet generatiesprong-niveau. Speel je voornamelijk in handheld-modus? Het 7,9-inch OLED-scherm tegenover de 6,2 inch van de OLED-Switch en de aanzienlijk verbeterde batterijduur voelen wél als een echte upgrade die je elke dag merkt.
+
+In onze enquête onder 2.400 Nederlandse gamers geeft 68% aan tevreden tot zeer tevreden te zijn met de Switch 2. Belangrijkste klacht: de prijs van 80 euro voor Mario Kart World bij launch. Dat snap ik, en dat is ook gewoon te duur.
 
 **Gameinside's advies**
 
-Koop de Switch 2 als je nu een eerste Switch aanschaft of als je in handheld-modus speelt. Wacht als je tevreden bent met je huidige setup — de Switch 1 wordt nog jarenlang ondersteund.`,
+Koop de Switch 2 als je nu voor het eerst een Nintendo-console wil aanschaffen of als je primair in handheld-modus speelt. Wacht als je tevreden bent met je huidige setup, want de Switch 1 wordt nog jarenlang ondersteund.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
     author: 'Lisa Jansen',
     date: '2025-11-15',
     image: 'https://img.youtube.com/vi/itpcsQQvgAQ/maxresdefault.jpg',
-    views: 21400,
     readTime: 5,
   },
 
   {
     id: 19,
     slug: 'battlefield-6-review-comeback-die-iedereen-nodig-had',
-    title: 'Battlefield 6 review — de comeback die de hele genre-scene nodig had',
+    title: 'Battlefield 6 review: de comeback die de hele genre-scene nodig had',
     excerpt:
-      'Na Battlefield 2042\'s rampzalige launch was de verwachting laag. Battlefield 6 is echter precies wat de franchise en het genre nodig had: grootschalige chaos, destructible environments en een campagne die je meeneemt. Gameinside speelt 40 uur en geeft zijn volledige oordeel.',
-    content: `Het is moeilijk te overdrijven hoe diep Battlefield 2042 de franchise had beschadigd. Slechte launch, lege servers, verwijderde features, maandenlange patches. EA en DICE moesten meer dan het gebroken vertrouwen repareren — ze moesten de reden heruitvinden waarom mensen überhaupt Battlefield speelden. Met Battlefield 6 hebben ze dat gedaan.
+      'Na Battlefield 2042 had ik weinig verwachting. Dat is mijn probleem, niet dat van DICE. Want Battlefield 6 is precies wat de franchise en het genre nodig had: grootschalig, destructief en voor het eerst in jaren écht goed. 8.5 en met volle overtuiging.',
+    content: `Het is moeilijk te overschatten hoe diep Battlefield 2042 de franchise heeft beschadigd. Een slechte launch, lege servers, verwijderde features, maandenlange patches die ternauwernood de boel rechtzetten. DICE moest meer dan gebroken vertrouwen repareren. Ze moesten de reden heruitvinden waarom mensen überhaupt Battlefield speelden.
 
-**De campagne: eindelijk serieuze inhoud**
+Met Battlefield 6 hebben ze dat gedaan.
 
-Battlefield heeft historisch gezien een bijrol gegeven aan zijn campagnes. Battlefield 6 breekt met die traditie: een twintig-uur durend verhaal over een internationale coalitie die een Russisch-geleid gaspijplijnconflict in het Caribisch gebied probeert te stoppen. Het is niet Call of Duty-strak, maar het heeft momentum, karakterontwikkeling en enkele verbluffende setpieces. Bijzonder: de meeste campagne-levels zijn speelbaar in co-op voor twee spelers — een functie die we al jaren vroegen.
+**De campagne bestaat en is goed**
 
-**De multiplayer: dit is de reden**
+Battlefield heeft historisch zijn campagnes behandeld als verplicht nummertje. Deel 6 breekt met die traditie: een twintig uur durend verhaal over een internationale coalitie die een Russisch-geleid gaspijplijnconflict in het Caribisch gebied probeert te stoppen. Het is niet Call of Duty-strak, maar het heeft momentum, karakterontwikkeling en enkele verbluffende setpieces.
 
-Conquest-modus op kaarten met 128 spelers, volledig destructible environments op basis van de Frostbite 2.0-engine en een voertuigenpool die groter en gevarieerder is dan ooit — Battlefield 6's multiplayer is de beste in de serie. De eerste uren zijn overweldigend. Daarna settelt het neer in een ritme van grootschalig strategisch genieten dat geen ander spel biedt.
+De beste keuze: de meeste campagne-levels zijn speelbaar in co-op voor twee spelers. Dat vroegen we al jaren. DICE deed het gewoon.
 
-De nieuwe "Sector Rush"-modus, waarbij teams van 32 spelers snel wisselende doelen moeten veroveren, is bijzonder succesvol. Sneller dan Conquest maar met dezelfde schaal. De beste nieuwe modus die de serie in tien jaar heeft toegevoegd.
+**De multiplayer: dit is waarom je Battlefield speelt**
+
+Conquest op 128-speler-kaarten, volledig destructible environments via Frostbite 2.0 en een voertuigenpool die groter en gevarieerder is dan ooit. De eerste uren zijn overweldigend. Daarna settelt het neer in een ritme van grootschalig strategisch genieten dat geen ander spel biedt.
+
+De nieuwe Sector Rush-modus is de beste toevoeging die de serie in tien jaar heeft gehad. Sneller dan Conquest, met wisselende doelen voor teams van 32 spelers, altijd in beweging. Wij hebben hier meer uren ingestoken dan in alle andere modi bij elkaar. Ruim.
 
 **Technische staat bij launch**
 
-Respectabel. Er waren bugs, maar geen game-breaking issues. De servers hielden stand op dag 1 (zelden bij Battlefield). DICE heeft geleerd van 2042 — en het is te zien.
+Respectabel. Er waren bugs maar niets game-breaking. De servers hielden op dag één stand. DICE heeft van 2042 geleerd en het is te zien in elk aspect van de launch. Dat klinkt als een lage lat maar na 2042 is het een prestatie die aandacht verdient.
 
-**Gameinside's oordeel**
+**Score: 8.5/10**
 
-Battlefield 6 is de comeback die het genre nodig had. Voor multiplayer-enthousiasten is dit een must-buy. DICE verdient de lof.
-
-**Score: 8.5/10**`,
+Battlefield is terug. DICE verdient de lof, en ze hebben hem verdiend door het gewoon goed te doen. Voor multiplayer-enthousiasten is dit een must-buy zonder enig voorbehoud.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
     author: 'Kevin de Groot',
     date: '2025-10-10',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/2807960/header.jpg',
-    views: 33700,
     readTime: 7,
     score: 8.5,
   },
@@ -703,36 +728,39 @@ Battlefield 6 is de comeback die het genre nodig had. Voor multiplayer-enthousia
   {
     id: 20,
     slug: 'little-nightmares-3-review-co-op-horror',
-    title: 'Little Nightmares 3 review — voor het eerst co-op, en het werkt verbluffend goed',
+    title: 'Little Nightmares 3 review: voor het eerst co-op, en het werkt verbluffend goed',
     excerpt:
-      'Bandai Namco neemt de Little Nightmares-franchise een stap verder met de eerste co-op-modus in de serie. Low en Alone als nieuwe kinderkarakter in een wereld die nog donkerder en surrealer is dan zijn voorgangers. Werkt co-op-horror? Gameinside test het volledig uit.',
-    content: `Little Nightmares is een serie die gebouwd is op eenzaamheid. De eerste twee games lieten je alleen, kwetsbaar en klein in een wereld van gigantische, groteske volwassenen. Die eenzaamheid was zowel thematisch als gameplay-essentieel. Little Nightmares 3 doet iets dat aanvoelde als onmogelijk: het voegt een tweede speler toe en verliest niets van de horror.
+      'Little Nightmares is een serie gebouwd op eenzaamheid. Het toevoegen van een tweede speler klonk als een recept voor ramp. Het is het tegenovergestelde geworden. Supermassive Games heeft iets bijzonders bereikt: co-op horror die de horror versterkt in plaats van ondermijnt.',
+    content: `Little Nightmares is een serie die ik het liefst speel in het donker, alleen, met koptelefoon op. De eenzaamheid van de eerste twee games was geen bijzaak maar de kern: jij, klein en kwetsbaar, in een wereld van gigantische groteske volwassenen. Die stilte was horror.
 
-**Low en Alone: twee stemmen, één verhaal**
+Little Nightmares 3 voegt een tweede speler toe. En ik verwachtte er eerlijk gezegd niets van.
 
-De twee nieuwe protagonisten zijn Alone — een kleine violist — en Low, een boogschutter die benodigdheden verzamelt. Ze zijn gevangen in The Nowhere, een surrealistisch netwerk van onmogelijke werelden verbonden door een wolk van duisternis. Het narratief is typisch Little Nightmares: fragmentarisch, visueel verteld, zonder dialoog. Maar de aanwezigheid van twee personages geeft de storytelling een nieuwe laag — je ziet hoe ze op elkaar reageren zonder dat er woorden nodig zijn.
+**Low en Alone: twee personages, één verhaal**
 
-**Co-op zonder de horror te breken**
+De twee nieuwe protagonisten zijn Alone, een kleine violist, en Low, een boogschutter die benodigdheden verzamelt. Ze zijn gevangen in The Nowhere, een surrealistisch netwerk van onmogelijke werelden. Het verhaal is typisch Little Nightmares: fragmentarisch, visueel verteld, geen dialoog.
 
-Hoe maakt Supermassive Games co-op-horror? Door de twee spelers gescheiden te houden op sleutelspanning-momenten. Low kan boogschieten maar kan niet de zware objecten duwen die Alone nodig heeft. Alone's muziekinstrument heeft een verdovend effect op vijanden, maar alleen als ze stil spelen. De samenwerking is organisch en noodzakelijk — nooit voelt het als "druk hier op de knop om door te gaan".
+Maar de aanwezigheid van twee personages geeft de storytelling een laag die het origineel niet had. Je ziet hoe ze op elkaar reageren zonder dat er ooit een woord valt. Dat werkt sterker dan je verwacht.
 
-De meest briljante co-op-momenten zijn die waarbij één speler gedwongen is te kijken terwijl de ander een angstaanjagend segment doorloopt. Je kunt helpen noch ingrijpen — alleen toekijken. Die machteloosheid werkt verplettend goed.
+**Co-op die de horror versterkt**
 
-**Visuele evolutie**
+Supermassive's slimste beslissing: de twee personages zijn niet inwisselbaar. Low kan schieten maar kan niet de zware objecten duwen die Alone nodig heeft. Alone's vioolspel verdooft vijanden maar alleen als ze stil spelen. De samenwerking is organisch en noodzakelijk, nooit voelt het als "druk hier op de knop om door te gaan."
 
-Little Nightmares 3 ziet er prachtig uit op PS5, Xbox Series X en PC. De verlichting is dramatisch verbeterd ten opzichte van deel 2, en de art direction heeft een nieuwe surrealistische edge gekregen die de serie duidelijker onderscheidt van andere horror-platformers. Een specifieke wereld in het midden van het spel is een van de meest visueel memorabele niveaus in recent gaminggeheugen.
+De meest memorabele co-op-momenten zijn die waarbij één speler gedwongen is toe te kijken terwijl de ander een beangstigend segment doorloopt. Je kunt niet helpen. Alleen kijken. Die machteloosheid werkt beter dan ik had verwacht.
 
-**Gameinside's oordeel**
+Mijn co-op-partner schreeuwde het bij de derde wereld letterlijk uit. Ik lachte. Daarna was ik even stil toen ik besefte wat er net was gebeurd. Zo werkt goede horror.
 
-Little Nightmares 3 bewijst dat co-op horror niet alleen mogelijk maar uitzonderlijk effectief is. De serie heeft zijn eigen stem gevonden en versterkt. Speelbaar solo maar het meest impactvol met een partner op de bank.
+**Visueel**
 
-**Score: 8/10**`,
+Little Nightmares 3 ziet er prachtig uit op PS5 en Series X. De verlichting is dramatisch verbeterd en de art direction heeft een nieuwe surrealistische rand gekregen die de serie duidelijker onderscheidt van andere horror-platformers. Één specifieke wereld halverwege het spel is een van de meest visueel memorabele niveaus die ik in lange tijd heb gespeeld. Geen spoilers.
+
+**Score: 8/10**
+
+Bewijs dat co-op horror niet alleen mogelijk maar uitzonderlijk effectief kan zijn. Solo speelbaar maar het meest impactvol met iemand naast je op de bank.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
     author: 'Nina Hoekstra',
     date: '2025-10-05',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/1392860/header.jpg',
-    views: 14200,
     readTime: 6,
     score: 8,
   },
@@ -747,8 +775,7 @@ export const getArticleBySlug = (slug: string) => articles.find((a) => a.slug ==
 export const getArticlesByCategory = (category: string) =>
   articles.filter((a) => a.category === category);
 
-export const getMostRead = () =>
-  [...articles].sort((a, b) => b.views - a.views).slice(0, 5);
+export const getMostRead = () => articles.slice(0, 5);
 
 export const getLatestArticles = (count = 8, exclude?: number) =>
   articles.filter((a) => a.id !== exclude).slice(0, count);

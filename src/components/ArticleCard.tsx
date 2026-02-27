@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Article, categoryColors, categoryTextColors } from '@/data/articles';
+import ImageWithFallback from '@/components/ImageWithFallback';
 
 interface ArticleCardProps {
   article: Article;
@@ -23,12 +23,13 @@ export default function ArticleCard({ article, size = 'default' }: ArticleCardPr
 
         {/* Image */}
         <div className={`relative ${imageHeight} overflow-hidden flex-shrink-0`}>
-          <Image
+          <ImageWithFallback
             src={article.image}
             alt={article.title}
             fill
             className="object-cover transition-transform duration-400 group-hover:scale-[1.04]"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            category={article.category}
           />
 
           {/* Image overlay on hover */}

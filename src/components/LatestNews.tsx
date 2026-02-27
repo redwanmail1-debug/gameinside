@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Article, categoryColors, categoryTextColors } from '@/data/articles';
+import ImageWithFallback from '@/components/ImageWithFallback';
 
 function LatestNewsItem({ article, index }: { article: Article; index: number }) {
   const tagBg   = categoryColors[article.category]   ?? 'bg-blue-500';
@@ -19,12 +19,13 @@ function LatestNewsItem({ article, index }: { article: Article; index: number })
 
         {/* Thumbnail */}
         <div className="relative w-20 h-14 flex-shrink-0 rounded-lg overflow-hidden ring-1 ring-[#30363d]/60">
-          <Image
+          <ImageWithFallback
             src={article.image}
             alt={article.title}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-300"
             sizes="80px"
+            category={article.category}
           />
         </div>
 

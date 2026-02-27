@@ -1,0 +1,27 @@
+# Cache-control headers for Gameinside
+# These are picked up by Netlify; for Vercel use next.config.js headers()
+
+# HTML pages — revalidate on every request, serve stale while revalidating
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Next.js static assets — immutable, cache forever
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images from public/ — cache 7 days
+/images/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# sitemap and robots — short cache so they stay fresh
+/sitemap.xml
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+# Security headers for all routes
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

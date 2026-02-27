@@ -7,6 +7,11 @@ import {
 } from '@/data/articles';
 import ArticleCard from '@/components/ArticleCard';
 import Sidebar from '@/components/Sidebar';
+import {
+  BASE_URL,
+  buildAlternates,
+  buildBreadcrumbJsonLd,
+} from '@/lib/seo';
 
 interface Props { params: { category: string } }
 
@@ -16,12 +21,43 @@ export async function generateStaticParams() {
   return validCategories.map((category) => ({ category }));
 }
 
+const categoryMetaDescriptions: Record<Category, string> = {
+  nieuws:   'Het laatste gaming nieuws uit de hele wereld, dagelijks vers op Gameinside. Blijf op de hoogte van alles wat er speelt in de game-industrie.',
+  reviews:  'Eerlijke en uitgebreide game reviews op Gameinside. Wij testen de nieuwste releases en vertellen je precies wat je ervan moet weten.',
+  games:    'Alles over nieuwe en aankomende games op Gameinside. Nieuws, trailers, releasedatums en meer voor alle platforms.',
+  tech:     'De nieuwste ontwikkelingen in gaming-technologie op Gameinside. Van next-gen hardware tot software-innovaties in de game-industrie.',
+  hardware: "Gaming hardware reviews en nieuws op Gameinside. GPU's, consoles, monitoren, headsets en meer — wij testen het voor jou.",
+  video:    'De beste gaming video\'s, trailers en gameplay op Gameinside. Mis geen enkele trailer of gameplay-onthulling.',
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!validCategories.includes(params.category)) return { title: 'Categorie niet gevonden' };
-  const label = categoryLabels[params.category as Category];
+  const category = params.category as Category;
+  const label = categoryLabels[category];
+  const categoryUrl = `${BASE_URL}/categorie/${category}`;
+  const seoTitle = `${label} Nieuws & Reviews`;
+  const seoDesc  = categoryMetaDescriptions[category];
+
   return {
-    title: `${label} – Gameinside`,
-    description: `Het laatste ${label.toLowerCase()} nieuws op Gameinside — jouw Nederlandse gaming en tech platform.`,
+    title: seoTitle,   // layout template adds " | Gameinside - Nederlands Gaming Nieuws"
+    description: seoDesc,
+
+    alternates: buildAlternates(categoryUrl),
+
+    openGraph: {
+      title: `${seoTitle} | Gameinside`,
+      description: seoDesc,
+      url: categoryUrl,
+      type: 'website',
+      siteName: 'Gameinside',
+      locale: 'nl_NL',
+    },
+
+    twitter: {
+      card: 'summary_large_image',
+      title: `${seoTitle} | Gameinside`,
+      description: seoDesc,
+    },
   };
 }
 
@@ -44,10 +80,23 @@ export default function CategoryPage({ params }: Props) {
   const categoryArticles = getArticlesByCategory(category);
   const mostRead = getMostRead();
 
+  const categoryUrl   = `${BASE_URL}/categorie/${category}`;
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: 'Home', url: BASE_URL },
+    { name: label,  url: categoryUrl },
+  ]);
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
+
+      {/* Structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-xs text-[#555e6b] mb-6">
+      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#555e6b] mb-6">
         <Link href="/" className="hover:text-[#00aaff] transition-colors">Home</Link>
         <span className="text-[#30363d]">›</span>
         <span className={`font-semibold ${tagText}`}>{label}</span>

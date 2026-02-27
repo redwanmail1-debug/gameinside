@@ -91,7 +91,7 @@ export default function Footer() {
               <h4 className="text-xs font-black text-[#e6edf3] uppercase tracking-widest mb-4">{title}</h4>
               <ul className="space-y-2">
                 {links.map((link) => (
-                  <li key={link.href}>
+                  <li key={link.label}>
                     <Link href={link.href}
                       className="text-sm text-[#8b949e] hover:text-[#00aaff] transition-colors">
                       {link.label}

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Article, categoryLabels, Category, categoryTextColors } from '@/data/articles';
+import { Article, categoryLabels, Category } from '@/data/articles';
 
 interface SidebarProps {
   mostRead: Article[];
@@ -20,7 +20,6 @@ export default function Sidebar({ mostRead }: SidebarProps) {
         </div>
         <div className="divide-y divide-[#30363d]/60">
           {mostRead.map((article, i) => {
-            const textColor = categoryTextColors[article.category] ?? 'text-blue-400';
             return (
               <Link
                 key={article.id}
@@ -36,9 +35,6 @@ export default function Sidebar({ mostRead }: SidebarProps) {
                                  transition-colors line-clamp-2 leading-snug mb-0.5">
                     {article.title}
                   </h4>
-                  <p className={`text-xs font-medium ${textColor}`}>
-                    {article.views.toLocaleString('nl-NL')} views
-                  </p>
                 </div>
               </Link>
             );
