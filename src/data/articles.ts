@@ -5,7 +5,8 @@ export interface Article {
   slug: string;
   title: string;
   excerpt: string;
-  content: string;
+  content: string;          // plain text/markdown for hardcoded articles
+  portableContent?: any[];  // Portable Text blocks for Sanity articles
   category: Category;
   categoryLabel: string;
   author: string;
@@ -19,6 +20,35 @@ export interface Article {
 
 export const articles: Article[] = [
   // ── FEBRUARI 2026 ──────────────────────────────────────────────────────────
+
+  {
+    id: 21,
+    slug: 'odido-datalek-hack-shinyhunters-6-miljoen-klanten-2026',
+    title: 'Odido datalek 2026: 6 miljoen Nederlanders gehackt, check nu of jij erbij zit',
+    excerpt:
+      'ShinyHunters hackte Odido en lekte data van 6,2 miljoen klanten. Namen, IBANs en paspoortnummers staan op straat. Dit moet je nu meteen doen.',
+    content: `Odido is gehackt. Niet een klein lek met een paar honderd accounts, maar een aanval waarbij de gegevens van maar liefst 6,2 miljoen klanten zijn buitgemaakt. De daders zijn het internationale hackercollectief **ShinyHunters**. Als je klant bent bij Odido of Ben, is de kans reëel dat jouw data erbij zit.
+
+Ook als gamer moet je dit serieus nemen. Steam, PlayStation Network, Xbox: bijna alles is tegenwoordig gekoppeld aan je telefoonnummer via tweestapsverificatie. Als criminelen jouw sim overnemen, hebben ze direct toegang tot al je accounts.
+
+ShinyHunters gebruikte een opvallend eenvoudige methode om binnen te komen. Ze belden Odido-medewerkers op, deden zich voor als ICT-collega's en manipuleerden hen om inloggegevens af te geven. Klassieke **social engineering**, maar dan op grote schaal. Zo kregen ze toegang tot het Salesforce CRM-systeem van Odido, het systeem waar alle klantdata in staat. Het extra zure is dat Salesforce Odido al had gewaarschuwd voor precies deze hackmethode. Die waarschuwing werd niet op tijd omgezet in actie.
+
+De hackers hadden toegang tot volledige namen en adressen, telefoonnummers, e-mailadressen, IBAN-bankrekeningnummers, geboortedatums, paspoortnummers en geldigheidsdata. ShinyHunters eiste meer dan een miljoen euro losgeld. Odido weigerde te betalen. Op 26 februari publiceerden de hackers de gegevens van 430.000 personen en 290.000 bedrijven op het dark web en dreigden ze de rest ook online te gooien.
+
+Voor gamers is er naast de voor de hand liggende risico's zoals bankfraude en identiteitsdiefstal nog een specifiek gevaar: **SIM-swapping**. Daarbij overtuigen criminelen jouw provider om jouw telefoonnummer over te zetten naar hun sim-kaart. Vervolgens resetten ze wachtwoorden van al je accounts via sms-verificatie. Je Steam-bibliotheek, je PlayStation-account met al je saves en DLC, je Xbox Game Pass: alles kan zo worden overgenomen. Het CMI (Centraal Meldpunt Identiteitsfraude) zag het aantal meldingen vorige week al meer dan verdubbelen naar 590 bevestigde gevallen.
+
+Wat kun je nu doen? Controleer eerst via odidodatalek.nl of jouw data is gelekt. Verander daarna de wachtwoorden van al je belangrijke accounts, begin met je e-mail en gamingplatformen. Zet tweestapsverificatie om van sms naar een authenticator-app zoals Google Authenticator of Authy, want sms is niet meer veilig genoeg. Als getroffen klant kun je ook de gratis F-Secure beveiliging activeren die Odido aanbiedt: 24 maanden gratis. Houd tot slot je bankrekening in de gaten en meld verdachte transacties direct.
+
+Als compensatie biedt Odido alle getroffen klanten dus 24 maanden gratis F-Secure, een digitaal beveiligingspakket. Dat is een goede stap, maar lost het achterliggende probleem niet op: de data is al weg. De Nederlandse politie steunt Odido in de beslissing om niet te betalen en onderzoekt de zaak actief. ShinyHunters is een bekende hackersgroep die eerder ook grote bedrijven als Ticketmaster en Santander trof. Check vandaag nog of jouw gegevens zijn gelekt en beveilig je accounts, zeker je gamingaccounts.`,
+    category: 'tech',
+    categoryLabel: 'Tech',
+    author: 'Gameinside Redactie',
+    date: '2026-02-28',
+    image: '/images/odido.jpg',
+    isBreaking: true,
+    isFeatured: false,
+    readTime: 5,
+  },
 
   {
     id: 1,
@@ -49,9 +79,9 @@ De eerste anderhalf uur is bewust langzaam. Capcom wil je het tempo laten voelen
 Resident Evil Requiem belooft iets wat ik de afgelopen jaren bij weinig grote releases heb gevoeld: dat een studio echt op zijn best is. Onze volledige review verschijnt dit weekend zodra ik het spel heb uitgespeeld. Maar als de tweede helft een fractie bijhoudt van wat de eerste belooft, is dit een stevige kandidaat voor Game of the Year 2026. Dat zeg ik je.`,
     category: 'games',
     categoryLabel: 'Games',
-    author: 'Thomas van der Berg',
+    author: 'Gameinside Redactie',
     date: '2026-02-27',
-    image: 'https://img.youtube.com/vi/M6gXJoN8RNk/maxresdefault.jpg',
+    image: '/images/resident-evil-requiem.jpeg',
     isFeatured: true,
     isBreaking: true,
     readTime: 6,
@@ -84,9 +114,9 @@ Game Pass blijft. Sharma heeft het meteen bevestigd. Maar de content-strategie e
 Spencer verdiende meer lof dan hij ooit heeft gekregen. Zijn vertrek voelt voorbarig. Ik hoop dat Sharma me het ongelijk bewijst, maar ik ben niet optimistisch.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
-    author: 'Sophie Bakker',
+    author: 'Gameinside Redactie',
     date: '2026-02-20',
-    image: 'https://img.youtube.com/vi/OhTHiVhqcKQ/maxresdefault.jpg',
+    image: '/images/phil-spencer.jpeg.avif',
     isBreaking: true,
     readTime: 5,
   },
@@ -120,9 +150,9 @@ De baasgevechten zijn ontworpen met drie spelers in gedachten en dat merk je. So
 Voor fans van het genre is dit verplicht speelgoed. Voor mensen die Nioh nog nooit hebben aangeraakt: begin met deel twee, maar kom hierheen. Team Ninja bouwt de beste actiegames die te weinig mensen bespreken.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
-    author: 'Mark Visser',
+    author: 'Gameinside Redactie',
     date: '2026-02-15',
-    image: 'https://img.youtube.com/vi/7dOHBqQfqLY/maxresdefault.jpg',
+    image: '/images/nioh-3.jpg',
     readTime: 7,
     score: 9,
   },
@@ -158,7 +188,7 @@ Alsof Sons of Sparta nog niet genoeg was: Sony kondigde tegelijkertijd aan dat d
 Sons of Sparta is klein van omvang maar groot van hart. Een liefdesbrief aan de roots van een franchise die zichzelf al eens heeft heruitgevonden. Als je ooit van God of War hebt gehouden, koop je dit.`,
     category: 'games',
     categoryLabel: 'Games',
-    author: 'Thomas van der Berg',
+    author: 'Gameinside Redactie',
     date: '2026-02-12',
     image:
       'https://blog.playstation.com/tachyon/2026/02/6cce0478459b4f47549fa59e9168f04924295731-scaled.jpg',
@@ -193,9 +223,9 @@ Ik geloof Rockstar deze keer. De gameplay ziet er compleet uit, november is trad
 Wachten maar. Weer.`,
     category: 'games',
     categoryLabel: 'Games',
-    author: 'Thomas van der Berg',
+    author: 'Gameinside Redactie',
     date: '2026-02-10',
-    image: 'https://img.youtube.com/vi/QdBZY2fkU-0/maxresdefault.jpg',
+    image: '/images/gta-6.webp',
     isBreaking: true,
     readTime: 5,
   },
@@ -229,7 +259,7 @@ Het vaakst aangekondigde maar minst getoonde spel van de Switch 2-launch. Retro 
 Naast de bevestigde games wil ik graag een nieuw Star Fox-spel, want er is al meer dan tien jaar niets van die franchise geweest. Een aankondiging voor Pokémon Legends 2. En als Nintendo écht aardig is: een verrassing-shadow-drop die niemand had verwacht. Nintendo heeft dat kunstje eerder uitgehaald. Doe het gewoon nog een keer.`,
     category: 'games',
     categoryLabel: 'Games',
-    author: 'Lisa Jansen',
+    author: 'Gameinside Redactie',
     date: '2026-02-08',
     image:
       'https://assets.nintendo.com/image/upload/q_auto/f_auto/c_fill,w_1200/ncom/en_US/articles/2025/nintendo-switch-2-to-be-released-in-2025/1920x1080_WN_PR01162025',
@@ -265,7 +295,7 @@ Ik huil bij Dragon Quest VII-momenten meer dan bij welk modern AAA-spel ook. Dat
 Voor nieuwkomers is dit de beste manier om een van de beste RPGs ooit te spelen. Voor fans van het origineel: ga erin met de verwachting dat sommige dierbare momenten weg zijn. Maar wat er overblijft is nog steeds buitengewoon.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
-    author: 'Nina Hoekstra',
+    author: 'Gameinside Redactie',
     date: '2026-02-05',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/742120/header.jpg',
     readTime: 6,
@@ -303,7 +333,7 @@ De handheld is het meest concrete gerucht en ook het meest logische antwoord op 
 Sharma heeft gezegd: binnenkort. We houden haar daaraan.`,
     category: 'tech',
     categoryLabel: 'Tech',
-    author: 'Kevin de Groot',
+    author: 'Gameinside Redactie',
     date: '2026-02-01',
     image:
       'https://xboxwire.thesourcemediaassets.com/sites/2/2026/01/012635_Base-Event-Post-Show_3840x2160_03-1ff4ad3f691eb6b547a2.jpg',
@@ -341,7 +371,7 @@ The Game Awards-jury heeft een statement gemaakt: authenticiteit wint van budget
 We gaven Expedition 33 bij release een 9.5. De Game Awards-overwinning voelt volledig verdiend. Als je dit nog niet hebt gespeeld: nu. Echt nu.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
-    author: 'Nina Hoekstra',
+    author: 'Gameinside Redactie',
     date: '2026-01-25',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/1903340/header.jpg',
     readTime: 5,
@@ -376,7 +406,7 @@ Ik wil ongelijk hebben. Echt. Maar de geschiedenis wijst een andere kant op.
 Voor Nederlandse EA-gamers: speel wat je hebt en houd alternatieven in de gaten. Dit scenario eindigt zelden goed voor de speler.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
-    author: 'Sophie Bakker',
+    author: 'Gameinside Redactie',
     date: '2026-01-18',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/2669320/header.jpg',
     isBreaking: true,
@@ -416,7 +446,7 @@ Drie producten tegelijkertijd. In drie verschillende formaten. Van een studio di
 Ik ben sceptisch. Tencent's betrokkenheid bij westerse studios heeft zelden geleid tot betere single-player ervaringen. De kans dat Ubisoft meer service-games maakt ten koste van verhaalgedreven avonturen is groot. Maar als het alternatief faillissement was, is dit de minst slechte uitweg. Dat is het positiefste wat ik hierover kan zeggen.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
-    author: 'Joost Vermeer',
+    author: 'Gameinside Redactie',
     date: '2026-01-12',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/3159330/header.jpg',
     readTime: 5,
@@ -455,7 +485,7 @@ Het originele Hollow Knight had al een legendarische soundtrack. Silksong is bet
 Het was het wachten waard. Alle acht jaar.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
-    author: 'Mark Visser',
+    author: 'Gameinside Redactie',
     date: '2026-01-05',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/1030300/header.jpg',
     readTime: 7,
@@ -493,7 +523,7 @@ Wachten. Dat is het enige wat je kunt doen. GTA VI wordt, als alles goed gaat, d
 Maar terwijl we straks de reviewscores lezen en het spel bespreken, misschien goed om even stil te staan bij de mensen die het hebben gemaakt. Een paar van hen zijn er inmiddels niet meer bij.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
-    author: 'Thomas van der Berg',
+    author: 'Gameinside Redactie',
     date: '2025-12-20',
     image: 'https://img.youtube.com/vi/VQRLujxTm3c/maxresdefault.jpg',
     isBreaking: true,
@@ -533,9 +563,9 @@ Activision heeft hier niet genoeg werk van gemaakt, en dat is te zien.
 Speel de campagne. Sla de rest over. En als je nog snakt naar goede multiplayer: Battlefield 6 staat er nog.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
-    author: 'Kevin de Groot',
+    author: 'Gameinside Redactie',
     date: '2025-12-15',
-    image: 'https://cdn.akamai.steamstatic.com/steam/apps/3606480/header.jpg',
+    image: '/images/black-ops-7.jpg',
     readTime: 6,
     score: 6.5,
   },
@@ -569,7 +599,7 @@ De industrie maakt een strategische fout. Hogere stukprijzen geven op korte term
 De sector heeft zichzelf in de voet geschoten. En het is de gewone speler die dat merkt.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
-    author: 'Sophie Bakker',
+    author: 'Gameinside Redactie',
     date: '2025-12-10',
     image: 'https://img.youtube.com/vi/VrTVeYm4iIM/maxresdefault.jpg',
     readTime: 5,
@@ -606,7 +636,7 @@ AI-tools zijn niet per definitie kwaad voor games. Tools die ontwikkelaars helpe
 Vincke heeft gelijk dat AI hem heeft geholpen BG3 te maken. De industrie heeft ook gelijk dat dit gevaarlijk wordt als het zonder kaders wordt overgenomen. Die kaders ontbreken momenteel volledig. Dat is het echte probleem, en het is een probleem dat de industrie zelf moet oplossen voordat de politiek het voor ze doet.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
-    author: 'Nina Hoekstra',
+    author: 'Gameinside Redactie',
     date: '2025-12-01',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/1086940/header.jpg',
     readTime: 5,
@@ -645,7 +675,7 @@ Arc Raiders explodeerde op streaming. Streamers vonden een perfecte combinatie v
 Extraction-shooters kunnen mainstream worden als ze correct worden gebalanceerd. Embark heeft dat bewezen. Als je van co-op games houdt en een beetje spanning verdraagt: verplicht.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
-    author: 'Joost Vermeer',
+    author: 'Gameinside Redactie',
     date: '2025-11-20',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/1808500/header.jpg',
     readTime: 6,
@@ -681,7 +711,7 @@ In onze enquête onder 2.400 Nederlandse gamers geeft 68% aan tevreden tot zeer 
 Koop de Switch 2 als je nu voor het eerst een Nintendo-console wil aanschaffen of als je primair in handheld-modus speelt. Wacht als je tevreden bent met je huidige setup, want de Switch 1 wordt nog jarenlang ondersteund.`,
     category: 'nieuws',
     categoryLabel: 'Nieuws',
-    author: 'Lisa Jansen',
+    author: 'Gameinside Redactie',
     date: '2025-11-15',
     image: 'https://img.youtube.com/vi/itpcsQQvgAQ/maxresdefault.jpg',
     readTime: 5,
@@ -718,7 +748,7 @@ Respectabel. Er waren bugs maar niets game-breaking. De servers hielden op dag �
 Battlefield is terug. DICE verdient de lof, en ze hebben hem verdiend door het gewoon goed te doen. Voor multiplayer-enthousiasten is dit een must-buy zonder enig voorbehoud.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
-    author: 'Kevin de Groot',
+    author: 'Gameinside Redactie',
     date: '2025-10-10',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/2807960/header.jpg',
     readTime: 7,
@@ -758,7 +788,7 @@ Little Nightmares 3 ziet er prachtig uit op PS5 en Series X. De verlichting is d
 Bewijs dat co-op horror niet alleen mogelijk maar uitzonderlijk effectief kan zijn. Solo speelbaar maar het meest impactvol met iemand naast je op de bank.`,
     category: 'reviews',
     categoryLabel: 'Reviews',
-    author: 'Nina Hoekstra',
+    author: 'Gameinside Redactie',
     date: '2025-10-05',
     image: 'https://cdn.akamai.steamstatic.com/steam/apps/1392860/header.jpg',
     readTime: 6,
