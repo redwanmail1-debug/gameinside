@@ -2,9 +2,10 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  getArticlesByCategory, getMostRead, categoryLabels, Category,
+  categoryLabels, type Category,
   categoryColors, categoryTextColors,
 } from '@/data/articles';
+import { getArticlesByCategory, getMostRead } from '@/lib/getArticles';
 import ArticleCard from '@/components/ArticleCard';
 import Sidebar from '@/components/Sidebar';
 import {
@@ -12,6 +13,9 @@ import {
   buildAlternates,
   buildBreadcrumbJsonLd,
 } from '@/lib/seo';
+
+// Revalidate every 60 seconds so newly published Sanity articles appear
+export const revalidate = 60;
 
 interface Props { params: { category: string } }
 
@@ -33,17 +37,15 @@ const categoryMetaDescriptions: Record<Category, string> = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!validCategories.includes(params.category)) return { title: 'Categorie niet gevonden' };
   const category = params.category as Category;
-  const label = categoryLabels[category];
+  const label    = categoryLabels[category];
   const categoryUrl = `${BASE_URL}/categorie/${category}`;
   const seoTitle = `${label} Nieuws & Reviews`;
   const seoDesc  = categoryMetaDescriptions[category];
 
   return {
-    title: seoTitle,   // layout template adds " | Gameinside - Nederlands Gaming Nieuws"
+    title: seoTitle,
     description: seoDesc,
-
     alternates: buildAlternates(categoryUrl),
-
     openGraph: {
       title: `${seoTitle} | Gameinside`,
       description: seoDesc,
@@ -52,7 +54,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: 'Gameinside',
       locale: 'nl_NL',
     },
-
     twitter: {
       card: 'summary_large_image',
       title: `${seoTitle} | Gameinside`,
@@ -70,17 +71,20 @@ const categoryDescriptions: Record<Category, string> = {
   video:    'De beste gaming video\'s, trailers, gameplay en meer.',
 };
 
-export default function CategoryPage({ params }: Props) {
+export default async function CategoryPage({ params }: Props) {
   if (!validCategories.includes(params.category)) notFound();
 
   const category = params.category as Category;
   const label    = categoryLabels[category];
   const tagBg    = categoryColors[category]   ?? 'bg-blue-500';
   const tagText  = categoryTextColors[category] ?? 'text-blue-400';
-  const categoryArticles = getArticlesByCategory(category);
-  const mostRead = getMostRead();
 
-  const categoryUrl   = `${BASE_URL}/categorie/${category}`;
+  const [categoryArticles, mostRead] = await Promise.all([
+    getArticlesByCategory(category),
+    getMostRead(),
+  ]);
+
+  const categoryUrl      = `${BASE_URL}/categorie/${category}`;
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: 'Home', url: BASE_URL },
     { name: label,  url: categoryUrl },
@@ -89,20 +93,17 @@ export default function CategoryPage({ params }: Props) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
 
-      {/* Structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#555e6b] mb-6">
         <Link href="/" className="hover:text-[#00aaff] transition-colors">Home</Link>
         <span className="text-[#30363d]">›</span>
         <span className={`font-semibold ${tagText}`}>{label}</span>
       </nav>
 
-      {/* Category header */}
       <div className="mb-8 pb-6 border-b border-[#30363d]/60">
         <div className="flex items-center gap-3 mb-2">
           <div className={`w-2 h-10 rounded-full ${tagBg}`} />
@@ -113,7 +114,6 @@ export default function CategoryPage({ params }: Props) {
         </p>
       </div>
 
-      {/* Category pills */}
       <div className="flex flex-wrap gap-2 mb-8">
         {validCategories.map((cat) => {
           const isActive = cat === category;
@@ -135,7 +135,6 @@ export default function CategoryPage({ params }: Props) {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Articles */}
         <div className="lg:col-span-2">
           {categoryArticles.length === 0 ? (
             <div className="text-center py-20 bg-[#1c2333] rounded-xl border border-[#30363d]">
@@ -158,7 +157,6 @@ export default function CategoryPage({ params }: Props) {
           )}
         </div>
 
-        {/* Sidebar */}
         <div className="lg:col-span-1">
           <div className="sticky top-20">
             <Sidebar mostRead={mostRead} />

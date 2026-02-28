@@ -1,11 +1,15 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { PortableText, type PortableTextComponents } from '@portabletext/react';
 import ImageWithFallback from '@/components/ImageWithFallback';
+import { categoryColors, categoryTextColors } from '@/data/articles';
 import {
-  articles, getArticleBySlug, getRelatedArticles, getMostRead,
-  categoryColors, categoryTextColors,
-} from '@/data/articles';
+  getAllArticles,
+  getArticleBySlug,
+  getRelatedArticles,
+  getMostRead,
+} from '@/lib/getArticles';
 import ArticleCard from '@/components/ArticleCard';
 import Sidebar from '@/components/Sidebar';
 import {
@@ -18,29 +22,29 @@ import {
   buildBreadcrumbJsonLd,
 } from '@/lib/seo';
 
+// Revalidate every 60 seconds so updated Sanity articles are reflected quickly
+export const revalidate = 60;
+
 interface Props { params: { slug: string } }
 
 export async function generateStaticParams() {
-  return articles.map((a) => ({ slug: a.slug }));
+  const all = await getAllArticles();
+  return all.map((a) => ({ slug: a.slug }));
 }
 
 // ── Per-article metadata ───────────────────────────────────────────────────
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const article = getArticleBySlug(params.slug);
+  const article = await getArticleBySlug(params.slug);
   if (!article) return { title: 'Artikel niet gevonden' };
 
-  const seoTitle  = truncateTitle(article.title);           // ≤ 60 chars for the article part
-  const seoDesc   = buildMetaDescription(article.excerpt);  // 140-160 chars
+  const seoTitle   = truncateTitle(article.title);
+  const seoDesc    = buildMetaDescription(article.excerpt);
   const articleUrl = `${BASE_URL}/artikel/${article.slug}`;
 
   return {
-    title: seoTitle,   // layout template adds " | Gameinside - Nederlands Gaming Nieuws"
+    title: seoTitle,
     description: seoDesc,
-
-    // Canonical + hreflang
     alternates: buildAlternates(articleUrl),
-
-    // Open Graph
     openGraph: {
       title: seoTitle,
       description: seoDesc,
@@ -48,18 +52,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       siteName: 'Gameinside',
       locale: 'nl_NL',
-      images: [
-        {
-          url: article.image,
-          alt: `${article.title} | Gameinside`,
-        },
-      ],
+      images: [{ url: article.image, alt: `${article.title} | Gameinside` }],
       publishedTime: article.date,
       authors: [article.author],
       section: article.categoryLabel,
     },
-
-    // Twitter Card
     twitter: {
       card: 'summary_large_image',
       title: seoTitle,
@@ -69,10 +66,64 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// ── Content renderer: ** headers → <h2>, inline bold stays strong ──────────
+// ── Portable Text renderer — matches the site's navy/blue theme ────────────
+const portableTextComponents: PortableTextComponents = {
+  block: {
+    normal: ({ children }) => (
+      <p className="text-[#c8d3e0] leading-relaxed text-[15px] mb-5">{children}</p>
+    ),
+    h2: ({ children }) => (
+      <h2 className="text-xl font-bold text-white mt-8 mb-3">{children}</h2>
+    ),
+    h3: ({ children }) => (
+      <h3 className="text-lg font-bold text-white mt-6 mb-2">{children}</h3>
+    ),
+    blockquote: ({ children }) => (
+      <blockquote className="border-l-2 border-[#00aaff] pl-4 bg-[#00aaff]/5 py-3 pr-4 rounded-r-lg my-4 text-[#8b949e] italic">
+        {children}
+      </blockquote>
+    ),
+  },
+  list: {
+    bullet: ({ children }) => (
+      <ul className="list-disc list-inside space-y-2 my-4 text-[#c8d3e0] pl-2">{children}</ul>
+    ),
+    number: ({ children }) => (
+      <ol className="list-decimal list-inside space-y-2 my-4 text-[#c8d3e0] pl-2">{children}</ol>
+    ),
+  },
+  listItem: {
+    bullet: ({ children }) => <li className="leading-relaxed">{children}</li>,
+    number: ({ children }) => <li className="leading-relaxed">{children}</li>,
+  },
+  marks: {
+    strong: ({ children }) => (
+      <strong className="text-white font-semibold">{children}</strong>
+    ),
+    em: ({ children }) => <em className="italic text-[#c8d3e0]">{children}</em>,
+    code: ({ children }) => (
+      <code className="font-mono text-sm bg-[#1c2333] px-1.5 py-0.5 rounded text-[#00aaff]">
+        {children}
+      </code>
+    ),
+  },
+  types: {
+    image: ({ value }: { value: { asset?: { url?: string }; alt?: string } }) => (
+      <div className="relative w-full aspect-video rounded-xl overflow-hidden my-6 ring-1 ring-[#30363d]/60">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={value.asset?.url ?? ''}
+          alt={value.alt ?? ''}
+          className="object-cover w-full h-full"
+        />
+      </div>
+    ),
+  },
+};
+
+// ── Fallback renderer for hardcoded markdown-ish content ───────────────────
 function renderContent(content: string) {
   return content.split('\n\n').map((block, i) => {
-    // Standalone **header** block → h2 (main section, SEO hierarchy H1=title, H2=sections)
     if (block.startsWith('**') && block.endsWith('**')) {
       return (
         <h2 key={i} className="text-xl font-bold text-white mt-8 mb-3">
@@ -80,7 +131,6 @@ function renderContent(content: string) {
         </h2>
       );
     }
-    // Bullet list
     if (block.startsWith('- ')) {
       const items = block.split('\n').filter((l) => l.startsWith('- '));
       return (
@@ -91,7 +141,6 @@ function renderContent(content: string) {
         </ul>
       );
     }
-    // Paragraph with optional inline bold
     const parts = block.split(/(\*\*[^*]+\*\*)/g);
     return (
       <p key={i} className="text-[#c8d3e0] leading-relaxed text-[15px] mb-5">
@@ -106,28 +155,30 @@ function renderContent(content: string) {
 }
 
 // ── Page component ─────────────────────────────────────────────────────────
-export default function ArticlePage({ params }: Props) {
-  const article = getArticleBySlug(params.slug);
+export default async function ArticlePage({ params }: Props) {
+  const [article, mostRead] = await Promise.all([
+    getArticleBySlug(params.slug),
+    getMostRead(),
+  ]);
+
   if (!article) notFound();
 
-  const related   = getRelatedArticles(article, 3);
-  const mostRead  = getMostRead();
-  const tagBg     = categoryColors[article.category]   ?? 'bg-blue-500';
-  const tagText   = categoryTextColors[article.category] ?? 'text-blue-400';
-  const articleUrl = `${BASE_URL}/artikel/${article.slug}`;
-  const categoryUrl = `${BASE_URL}/categorie/${article.category}`;
+  const related      = await getRelatedArticles(article, 3);
+  const tagBg        = categoryColors[article.category]      ?? 'bg-blue-500';
+  const tagText      = categoryTextColors[article.category]  ?? 'text-blue-400';
+  const articleUrl   = `${BASE_URL}/artikel/${article.slug}`;
+  const categoryUrl  = `${BASE_URL}/categorie/${article.category}`;
 
   const formattedDate = new Date(article.date).toLocaleDateString('nl-NL', {
     weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
   });
 
-  // Structured data
-  const articleJsonLd  = buildArticleJsonLd(article);
-  const reviewJsonLd   = buildReviewJsonLd(article);
+  const articleJsonLd    = buildArticleJsonLd(article);
+  const reviewJsonLd     = buildReviewJsonLd(article);
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
-    { name: 'Home',                 url: BASE_URL },
-    { name: article.categoryLabel,  url: categoryUrl },
-    { name: article.title,          url: articleUrl },
+    { name: 'Home',                url: BASE_URL },
+    { name: article.categoryLabel, url: categoryUrl },
+    { name: article.title,         url: articleUrl },
   ]);
 
   return (
@@ -154,7 +205,6 @@ export default function ArticlePage({ params }: Props) {
         {/* ── Main article ──────────────────────────────────────────────── */}
         <article className="lg:col-span-2">
 
-          {/* Breadcrumb nav (also feeds the BreadcrumbList schema above) */}
           <nav aria-label="Breadcrumb"
                className="flex items-center gap-2 text-xs text-[#555e6b] mb-5 flex-wrap">
             <Link href="/" className="hover:text-[#00aaff] transition-colors">Home</Link>
@@ -167,7 +217,6 @@ export default function ArticlePage({ params }: Props) {
             <span className="text-[#8b949e] truncate max-w-[220px]">{article.title}</span>
           </nav>
 
-          {/* Tags */}
           <div className="flex items-center gap-2 mb-4 flex-wrap">
             {article.isBreaking && (
               <span className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-black uppercase tracking-wider rounded-md bg-red-600 text-white">
@@ -186,18 +235,15 @@ export default function ArticlePage({ params }: Props) {
             )}
           </div>
 
-          {/* H1 — only one per page */}
           <h1 className="text-2xl md:text-4xl font-black text-white leading-tight mb-5">
             {article.title}
           </h1>
 
-          {/* Excerpt / lead paragraph */}
           <p className="text-[#8b949e] text-base leading-relaxed mb-6
                         border-l-2 border-[#00aaff] pl-4 bg-[#00aaff]/5 py-3 pr-4 rounded-r-lg">
             {article.excerpt}
           </p>
 
-          {/* Author + meta */}
           <div className="flex flex-wrap items-center gap-4 text-sm text-[#8b949e] mb-6
                           pb-5 border-b border-[#30363d]/60">
             <div className="flex items-center gap-2">
@@ -213,7 +259,6 @@ export default function ArticlePage({ params }: Props) {
             <span>{article.readTime} min leestijd</span>
           </div>
 
-          {/* Hero image — priority=true, above the fold */}
           <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-8
                           ring-1 ring-[#30363d]/60">
             <ImageWithFallback
@@ -227,12 +272,15 @@ export default function ArticlePage({ params }: Props) {
             />
           </div>
 
-          {/* Article body — H2 for sections (see renderContent above) */}
+          {/* Article body — Portable Text for Sanity articles, markdown for hardcoded */}
           <div className="prose-custom">
-            {renderContent(article.content)}
+            {article.portableContent && article.portableContent.length > 0 ? (
+              <PortableText value={article.portableContent} components={portableTextComponents} />
+            ) : (
+              renderContent(article.content)
+            )}
           </div>
 
-          {/* Internal link: more category news */}
           <div className="mt-8 pt-6 border-t border-[#30363d]/60">
             <Link
               href={`/categorie/${article.category}`}
@@ -244,7 +292,6 @@ export default function ArticlePage({ params }: Props) {
             </Link>
           </div>
 
-          {/* Share */}
           <div className="mt-6 pt-6 border-t border-[#30363d]/60">
             <p className="text-xs font-black text-[#555e6b] uppercase tracking-widest mb-3">
               Deel dit artikel
@@ -270,7 +317,6 @@ export default function ArticlePage({ params }: Props) {
         </div>
       </div>
 
-      {/* Related articles */}
       {related.length > 0 && (
         <section className="mt-14 pt-8 border-t border-[#30363d]/60"
                  aria-label="Gerelateerde artikelen">

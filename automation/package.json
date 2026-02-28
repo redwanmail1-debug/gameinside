@@ -1,0 +1,16 @@
+{
+  "name": "gameinside-automation",
+  "version": "1.0.0",
+  "description": "Automated Dutch gaming news agent for Gameinside.nl",
+  "main": "news-fetcher.js",
+  "scripts": {
+    "start": "node news-fetcher.js",
+    "test": "node news-fetcher.js --test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "@sanity/client": "^7.16.0",
+    "nodemailer": "^6.9.16",
+    "rss-parser": "^3.13.0"
+  }
+}

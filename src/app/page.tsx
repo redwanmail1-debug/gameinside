@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { articles, featuredArticle, getMostRead } from '@/data/articles';
 import HeroSection from '@/components/HeroSection';
 import ArticleGrid from '@/components/ArticleGrid';
 import LatestNews from '@/components/LatestNews';
@@ -10,6 +9,15 @@ import {
   buildAlternates,
   BASE_URL,
 } from '@/lib/seo';
+import {
+  getAllArticles,
+  getFeaturedArticle,
+  getMostRead,
+  getBreakingTitles,
+} from '@/lib/getArticles';
+
+// Revalidate every 60 seconds so new Sanity articles appear without a full rebuild
+export const revalidate = 60;
 
 // ── Homepage metadata ──────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -39,19 +47,19 @@ export const metadata: Metadata = {
 };
 
 // ── Page component ─────────────────────────────────────────────────────────
-export default function HomePage() {
-  const mostRead = getMostRead();
-  const gridArticles = articles.filter((a) => a.id !== featuredArticle.id).slice(0, 6);
-  const gridIds = new Set(gridArticles.map((a) => a.id));
-  const latestArticles = articles
-    .filter((a) => a.id !== featuredArticle.id && !gridIds.has(a.id))
-    .slice(0, 9);
+export default async function HomePage() {
+  const [allArticles, featured, mostRead, breakingTitles] = await Promise.all([
+    getAllArticles(),
+    getFeaturedArticle(),
+    getMostRead(),
+    getBreakingTitles(),
+  ]);
 
-  const breakingTitles = articles
-    .filter((a) => a.isBreaking)
-    .slice(0, 4)
-    .map((a) => a.title)
-    .join('   ·   ');
+  const gridArticles = allArticles.filter((a) => a.id !== featured.id).slice(0, 6);
+  const gridIds = new Set(gridArticles.map((a) => a.id));
+  const latestArticles = allArticles
+    .filter((a) => a.id !== featured.id && !gridIds.has(a.id))
+    .slice(0, 9);
 
   return (
     <>
@@ -65,7 +73,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildOrganizationJsonLd()) }}
       />
 
-      <HeroSection article={featuredArticle} />
+      <HeroSection article={featured} />
 
       {/* Breaking ticker */}
       <div className="relative overflow-hidden bg-gradient-to-r from-[#7c3aed] to-[#00aaff]">

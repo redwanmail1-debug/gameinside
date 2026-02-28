@@ -31,3 +31,4 @@ Thumbs.db
 .idea/
 node_modules/
 .next/
+automation/.env
