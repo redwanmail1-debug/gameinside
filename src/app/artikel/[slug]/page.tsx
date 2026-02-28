@@ -12,6 +12,7 @@ import {
 } from '@/lib/getArticles';
 import ArticleCard from '@/components/ArticleCard';
 import Sidebar from '@/components/Sidebar';
+import Comments from '@/components/Comments';
 import {
   BASE_URL,
   truncateTitle,
@@ -315,6 +316,11 @@ export default async function ArticlePage({ params }: Props) {
             <Sidebar mostRead={mostRead} />
           </div>
         </div>
+      </div>
+
+      {/* ── Comments ──────────────────────────────────────────────────────── */}
+      <div className="mt-2 lg:max-w-[66%]">
+        <Comments articleSlug={article.slug} />
       </div>
 
       {related.length > 0 && (

@@ -5,9 +5,10 @@ import ImageWithFallback from '@/components/ImageWithFallback';
 interface ArticleCardProps {
   article: Article;
   size?: 'default' | 'large' | 'small';
+  commentCount?: number;
 }
 
-export default function ArticleCard({ article, size = 'default' }: ArticleCardProps) {
+export default function ArticleCard({ article, size = 'default', commentCount }: ArticleCardProps) {
   const imageHeight =
     size === 'large' ? 'h-56 md:h-72' :
     size === 'small' ? 'h-36' : 'h-48';
@@ -75,9 +76,16 @@ export default function ArticleCard({ article, size = 'default' }: ArticleCardPr
 
           <div className="flex items-center justify-between text-xs text-[#555e6b] mt-auto pt-2 border-t border-[#30363d]/60">
             <span className={`font-semibold ${tagText}`}>{article.author}</span>
-            <span className="text-[#8b949e]">
-              {new Date(article.date).toLocaleDateString('nl-NL', { day: 'numeric', month: 'short' })}
-            </span>
+            <div className="flex items-center gap-2 text-[#8b949e]">
+              {commentCount !== undefined && (
+                <span className="flex items-center gap-1">
+                  💬 {commentCount}
+                </span>
+              )}
+              <span>
+                {new Date(article.date).toLocaleDateString('nl-NL', { day: 'numeric', month: 'short' })}
+              </span>
+            </div>
           </div>
         </div>
       </article>
