@@ -17,7 +17,7 @@ import {
 // Revalidate every 60 seconds so newly published Sanity articles appear
 export const revalidate = 60;
 
-interface Props { params: { category: string } }
+interface Props { params: Promise<{ category: string }> }
 
 const validCategories = ['nieuws', 'reviews', 'games', 'tech', 'hardware', 'video'];
 
@@ -35,8 +35,9 @@ const categoryMetaDescriptions: Record<Category, string> = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  if (!validCategories.includes(params.category)) return { title: 'Categorie niet gevonden' };
-  const category = params.category as Category;
+  const { category: categoryParam } = await params;
+  if (!validCategories.includes(categoryParam)) return { title: 'Categorie niet gevonden' };
+  const category = categoryParam as Category;
   const label    = categoryLabels[category];
   const categoryUrl = `${BASE_URL}/categorie/${category}`;
   const seoTitle = `${label} Nieuws & Reviews`;
@@ -72,9 +73,10 @@ const categoryDescriptions: Record<Category, string> = {
 };
 
 export default async function CategoryPage({ params }: Props) {
-  if (!validCategories.includes(params.category)) notFound();
+  const { category: categoryParam } = await params;
+  if (!validCategories.includes(categoryParam)) notFound();
 
-  const category = params.category as Category;
+  const category = categoryParam as Category;
   const label    = categoryLabels[category];
   const tagBg    = categoryColors[category]   ?? 'bg-blue-500';
   const tagText  = categoryTextColors[category] ?? 'text-blue-400';

@@ -26,7 +26,7 @@ import {
 // Revalidate every 60 seconds so updated Sanity articles are reflected quickly
 export const revalidate = 60;
 
-interface Props { params: { slug: string } }
+interface Props { params: Promise<{ slug: string }> }
 
 export async function generateStaticParams() {
   const all = await getAllArticles();
@@ -35,12 +35,13 @@ export async function generateStaticParams() {
 
 // ── Per-article metadata ───────────────────────────────────────────────────
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const article = await getArticleBySlug(params.slug);
+  const { slug } = await params;
+  const article = await getArticleBySlug(slug);
   if (!article) return { title: 'Artikel niet gevonden' };
 
   const seoTitle   = truncateTitle(article.title);
   const seoDesc    = buildMetaDescription(article.excerpt);
-  const articleUrl = `${BASE_URL}/artikel/${article.slug}`;
+  const articleUrl = `${BASE_URL}/artikel/${slug}`;
 
   return {
     title: seoTitle,
@@ -157,8 +158,9 @@ function renderContent(content: string) {
 
 // ── Page component ─────────────────────────────────────────────────────────
 export default async function ArticlePage({ params }: Props) {
+  const { slug } = await params;
   const [article, mostRead] = await Promise.all([
-    getArticleBySlug(params.slug),
+    getArticleBySlug(slug),
     getMostRead(),
   ]);
 
