@@ -24,6 +24,26 @@ export function useAuth() {
     return data as Profile | null;
   }, []);
 
+  // Creates the profile if it doesn't exist yet.
+  // Runs after SIGNED_IN so auth.uid() is set and RLS passes.
+  const ensureProfile = useCallback(async (user: import('@supabase/supabase-js').User): Promise<Profile | null> => {
+    const existing = await fetchProfile(user.id);
+    if (existing) return existing;
+
+    const username =
+      (user.user_metadata?.username as string | undefined) ||
+      user.email?.split('@')[0] ||
+      `user_${user.id.slice(0, 8)}`;
+
+    const { data } = await supabase
+      .from('profiles')
+      .insert({ id: user.id, username, avatar_url: null, comment_count: 0 })
+      .select('*')
+      .single();
+
+    return data as Profile | null;
+  }, [fetchProfile]);
+
   useEffect(() => {
     // Initial session
     supabase.auth.getSession().then(async ({ data: { session } }) => {
@@ -35,7 +55,16 @@ export function useAuth() {
     // Listen for auth state changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
       const user = session?.user ?? null;
-      const profile = user ? await fetchProfile(user.id) : null;
+      let profile: Profile | null = null;
+
+      if (user) {
+        // On SIGNED_IN ensure the profile exists (creates it if email confirmation
+        // prevented the insert during signUp because session was null then).
+        profile = _event === 'SIGNED_IN'
+          ? await ensureProfile(user)
+          : await fetchProfile(user.id);
+      }
+
       setState({ user, profile, loading: false });
 
       // Stuur welkomstmail na eerste inlog (na e-mailbevestiging)
@@ -67,7 +96,7 @@ export function useAuth() {
     });
 
     return () => subscription.unsubscribe();
-  }, [fetchProfile]);
+  }, [fetchProfile, ensureProfile]);
 
   // ── Registratie ───────────────────────────────────────────────────────────
 
@@ -75,19 +104,20 @@ export function useAuth() {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { username } },
+      options: {
+        data: { username },
+        // Route the confirmation link through our callback page so the PKCE
+        // code exchange happens on a clean page and the user isn't left hanging.
+        emailRedirectTo: 'https://gameinside.nl/auth/callback',
+      },
     });
     if (error) throw error;
 
-    // Maak profiel aan
-    if (data.user) {
-      await supabase.from('profiles').insert({
-        id: data.user.id,
-        username,
-        avatar_url: null,
-        comment_count: 0,
-      });
-    }
+    // Profile creation is handled by ensureProfile() in onAuthStateChange
+    // (fires on SIGNED_IN). We can't insert here because when email
+    // confirmation is enabled, signUp returns session: null and the RLS
+    // policy blocks anonymous inserts. The username is stored in auth
+    // metadata so ensureProfile() can read it later.
 
     // Sla vlag op voor welkomstmail na eerste inlog
     try {
