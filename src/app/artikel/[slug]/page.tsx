@@ -12,8 +12,7 @@ import {
 } from '@/lib/getArticles';
 import ArticleCard from '@/components/ArticleCard';
 import Sidebar from '@/components/Sidebar';
-import dynamic from 'next/dynamic';
-const Comments = dynamic(() => import('@/components/Comments'), { ssr: false });
+import Comments from '@/components/Comments';
 import {
   BASE_URL,
   truncateTitle,

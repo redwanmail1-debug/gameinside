@@ -5,6 +5,8 @@ import { supabase, type Comment } from '@/lib/supabase';
 
 export type SortOrder = 'liked' | 'newest' | 'oldest';
 
+const LIKE_MILESTONES = [5, 10, 25];
+
 export function useComments(articleSlug: string, userId?: string) {
   const [comments, setComments]   = useState<Comment[]>([]);
   const [loading, setLoading]     = useState(true);
@@ -19,7 +21,7 @@ export function useComments(articleSlug: string, userId?: string) {
     const orderCol  = sort === 'oldest' ? 'created_at' : sort === 'newest' ? 'created_at' : 'likes';
     const ascending = sort === 'oldest';
 
-    // Fetch top-level comments
+    // Haal top-level reacties op
     const { data: topLevel, error, count } = await supabase
       .from('comments')
       .select('*, profile:profiles(id,username,avatar_url,comment_count)', { count: 'exact' })
@@ -31,7 +33,7 @@ export function useComments(articleSlug: string, userId?: string) {
 
     if (error || !topLevel) { setLoading(false); return; }
 
-    // Fetch all replies for those top-level comments in one query
+    // Haal alle reacties op in één query
     const parentIds = topLevel.map((c) => c.id);
     let replies: Comment[] = [];
     if (parentIds.length > 0) {
@@ -44,7 +46,7 @@ export function useComments(articleSlug: string, userId?: string) {
       replies = (replyData ?? []) as Comment[];
     }
 
-    // Fetch likes by current user
+    // Haal likes van huidige gebruiker op
     let likedIds = new Set<string>();
     if (userId) {
       const allIds = [...topLevel.map((c) => c.id), ...replies.map((c) => c.id)];
@@ -56,7 +58,7 @@ export function useComments(articleSlug: string, userId?: string) {
       likedIds = new Set((likeData ?? []).map((l) => l.comment_id));
     }
 
-    // Nest replies under parents
+    // Nest reacties onder ouders
     const nested: Comment[] = topLevel.map((c) => ({
       ...c,
       liked_by_user: likedIds.has(c.id),
@@ -72,7 +74,7 @@ export function useComments(articleSlug: string, userId?: string) {
 
   useEffect(() => { fetchComments(); }, [fetchComments]);
 
-  // ── Mutations ────────────────────────────────────────────────────────────
+  // ── Mutations ─────────────────────────────────────────────────────────────
 
   const postComment = async (content: string, parentId?: string) => {
     if (!userId) throw new Error('Niet ingelogd');
@@ -83,8 +85,24 @@ export function useComments(articleSlug: string, userId?: string) {
       content: content.trim(),
     });
     if (error) throw error;
-    // Bump comment_count on profile
+
+    // Verhoog reactie-teller op profiel
     await supabase.rpc('increment_comment_count', { profile_id: userId });
+
+    // Stuur reactie-notificatie als het een antwoord is (fire-and-forget)
+    if (parentId) {
+      fetch('/api/email/reply', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          parentCommentId: parentId,
+          replyContent: content.trim(),
+          senderUserId: userId,
+          articleSlug,
+        }),
+      }).catch(() => {});
+    }
+
     await fetchComments();
   };
 
@@ -104,7 +122,7 @@ export function useComments(articleSlug: string, userId?: string) {
       .update({ is_deleted: true })
       .eq('id', commentId);
 
-    // Admin can delete any comment; regular users only their own
+    // Admin kan elke reactie verwijderen, gebruikers alleen hun eigen
     if (!isAdmin) query.eq('user_id', userId);
 
     const { error } = await query;
@@ -129,7 +147,23 @@ export function useComments(articleSlug: string, userId?: string) {
     } else {
       await supabase.from('comment_likes').insert({ user_id: userId, comment_id: commentId });
       await supabase.rpc('increment_likes', { comment_id: commentId });
+
+      // Controleer like-mijlpaal na increment (fire-and-forget)
+      const currentLikes =
+        comments
+          .flatMap((c) => [c, ...(c.replies ?? [])])
+          .find((c) => c.id === commentId)?.likes ?? 0;
+      const newLikes = currentLikes + 1;
+
+      if (LIKE_MILESTONES.includes(newLikes)) {
+        fetch('/api/email/like', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ commentId, likerUserId: userId }),
+        }).catch(() => {});
+      }
     }
+
     await fetchComments();
   };
 

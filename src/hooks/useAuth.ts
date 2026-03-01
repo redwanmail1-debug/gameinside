@@ -10,6 +10,8 @@ export interface AuthState {
   loading: boolean;
 }
 
+const WELCOME_FLAG = 'gi_pending_welcome';
+
 export function useAuth() {
   const [state, setState] = useState<AuthState>({ user: null, profile: null, loading: true });
 
@@ -30,33 +32,65 @@ export function useAuth() {
       setState({ user, profile, loading: false });
     });
 
-    // Listen for changes
+    // Listen for auth state changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
       const user = session?.user ?? null;
       const profile = user ? await fetchProfile(user.id) : null;
       setState({ user, profile, loading: false });
+
+      // Stuur welkomstmail na eerste inlog (na e-mailbevestiging)
+      if (user && _event === 'SIGNED_IN') {
+        try {
+          const raw = localStorage.getItem(WELCOME_FLAG);
+          if (raw) {
+            const { email, username, ts } = JSON.parse(raw) as {
+              email: string;
+              username: string;
+              ts: number;
+            };
+            const sevenDays = 7 * 24 * 60 * 60 * 1000;
+            if (Date.now() - ts < sevenDays) {
+              localStorage.removeItem(WELCOME_FLAG);
+              fetch('/api/email/welcome', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, username }),
+              }).catch(() => {});
+            } else {
+              localStorage.removeItem(WELCOME_FLAG);
+            }
+          }
+        } catch {
+          // localStorage niet beschikbaar of JSON-fout → negeren
+        }
+      }
     });
 
     return () => subscription.unsubscribe();
   }, [fetchProfile]);
 
-  const signUp = async (email: string, password: string, username: string) => {
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: { data: { username } },
-    });
-    if (error) throw error;
+  // ── Registratie via server (geen dubbele Supabase-mail) ─────────────────
 
-    // Create profile row
-    if (data.user) {
-      await supabase.from('profiles').insert({
-        id: data.user.id,
-        username,
-        avatar_url: null,
-        comment_count: 0,
-      });
+  const signUp = async (email: string, password: string, username: string) => {
+    const res = await fetch('/api/auth/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password, username }),
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Registratie mislukt. Probeer het opnieuw.');
+
+    // Sla vlag op voor welkomstmail na eerste inlog
+    try {
+      localStorage.setItem(
+        WELCOME_FLAG,
+        JSON.stringify({ email, username, ts: Date.now() }),
+      );
+    } catch {
+      // localStorage niet beschikbaar → negeren
     }
+
     return data;
   };
 
@@ -77,11 +111,18 @@ export function useAuth() {
     await supabase.auth.signOut();
   };
 
+  // ── Wachtwoord-reset via server (onze eigen e-mail) ───────────────────────
+
   const resetPassword = async (email: string) => {
-    const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/reset-password`,
+    const res = await fetch('/api/email/reset', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
     });
-    if (error) throw error;
+    if (!res.ok) {
+      const data = await res.json();
+      throw new Error(data.error || 'Reset mislukt. Probeer het opnieuw.');
+    }
   };
 
   return { ...state, signUp, signIn, signInWithGoogle, signOut, resetPassword };
