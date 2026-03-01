@@ -12,7 +12,7 @@
     "@portabletext/react": "^6.0.2",
     "@sanity/client": "^7.16.0",
     "@supabase/supabase-js": "^2.98.0",
-    "next": "14.2.5",
+    "next": "^14.2.30",
     "react": "^18",
     "react-dom": "^18"
   },
