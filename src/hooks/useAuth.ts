@@ -69,18 +69,25 @@ export function useAuth() {
     return () => subscription.unsubscribe();
   }, [fetchProfile]);
 
-  // ── Registratie via server (geen dubbele Supabase-mail) ─────────────────
+  // ── Registratie ───────────────────────────────────────────────────────────
 
   const signUp = async (email: string, password: string, username: string) => {
-    const res = await fetch('/api/auth/signup', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password, username }),
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: { data: { username } },
     });
+    if (error) throw error;
 
-    let data: { error?: string; success?: boolean } = {};
-    try { data = await res.json(); } catch { /* non-JSON response */ }
-    if (!res.ok) throw new Error(data.error || 'Registratie mislukt. Probeer het opnieuw.');
+    // Maak profiel aan
+    if (data.user) {
+      await supabase.from('profiles').insert({
+        id: data.user.id,
+        username,
+        avatar_url: null,
+        comment_count: 0,
+      });
+    }
 
     // Sla vlag op voor welkomstmail na eerste inlog
     try {
