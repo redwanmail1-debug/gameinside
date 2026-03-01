@@ -78,7 +78,8 @@ export function useAuth() {
       body: JSON.stringify({ email, password, username }),
     });
 
-    const data = await res.json();
+    let data: { error?: string; success?: boolean } = {};
+    try { data = await res.json(); } catch { /* non-JSON response */ }
     if (!res.ok) throw new Error(data.error || 'Registratie mislukt. Probeer het opnieuw.');
 
     // Sla vlag op voor welkomstmail na eerste inlog
@@ -120,7 +121,8 @@ export function useAuth() {
       body: JSON.stringify({ email }),
     });
     if (!res.ok) {
-      const data = await res.json();
+      let data: { error?: string } = {};
+      try { data = await res.json(); } catch { /* non-JSON response */ }
       throw new Error(data.error || 'Reset mislukt. Probeer het opnieuw.');
     }
   };
