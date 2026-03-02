@@ -3,7 +3,7 @@ import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact | Gameinside',
-  description: 'Neem contact op met de redactie van Gameinside. Vragen, persberichten, correcties of samenwerkingen — we horen graag van je.',
+  description: 'Neem contact op met de redactie van Gameinside. Vragen, persberichten, correcties of samenwerkingen? We horen graag van je.',
 };
 
 function SectionTitle({ children }: { children: React.ReactNode }) {

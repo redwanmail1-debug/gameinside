@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
       from: 'Gameinside <noreply@gameinside.nl>',
       to: 'redactie@gameinside.nl',
       replyTo: email,
-      subject: `[Adverteren] ${bedrijfsnaam} — ${samenwerking}`,
+      subject: `[Adverteren] ${bedrijfsnaam} - ${samenwerking}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #0d1117; color: #e6edf3; padding: 32px; border-radius: 12px; border: 1px solid #30363d;">
           <h2 style="color: #00aaff; margin-top: 0;">Nieuwe advertentieaanvraag</h2>
@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
             </tr>
             <tr>
               <td style="padding: 8px 0; color: #8b949e;">Telefoon</td>
-              <td style="padding: 8px 0; color: #e6edf3;">${telefoon || '—'}</td>
+              <td style="padding: 8px 0; color: #e6edf3;">${telefoon || 'Niet opgegeven'}</td>
             </tr>
             <tr>
               <td style="padding: 8px 0; color: #8b949e;">Samenwerking</td>

@@ -123,7 +123,7 @@ export default function AdverterenPage() {
             </h1>
             <p className="text-[#8b949e] text-base leading-relaxed">
               Bereik een gepassioneerde gaming community via Nederland&apos;s groeiende gaming nieuwsplatform.
-              Flexibele pakketten voor elk budget — van display advertenties tot diepgaande gesponsorde content.
+              Flexibele pakketten voor elk budget, van display advertenties tot diepgaande gesponsorde content.
             </p>
           </div>
         </div>
