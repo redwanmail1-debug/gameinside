@@ -19,8 +19,8 @@ const footerLinks = {
   Redactie: [
     { href: '#', label: 'Over Gameinside' },
     { href: '#', label: 'Redactieteam' },
-    { href: '#', label: 'Adverteren' },
-    { href: '#', label: 'Contact' },
+    { href: '/adverteren', label: 'Adverteren' },
+    { href: '/contact', label: 'Contact' },
     { href: '#', label: 'Privacy' },
   ],
 };
