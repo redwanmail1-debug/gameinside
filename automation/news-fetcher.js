@@ -268,8 +268,10 @@ async function main() {
   log('\n🎉 Klaar!\n');
 }
 
-main().catch(async (err) => {
-  console.error('\n💥 Fatale fout:', err.message);
-  await sendFailure('Fatale fout in news agent', err.stack || err.message).catch(() => {});
-  process.exit(1);
-});
+main()
+  .then(() => process.exit(0))
+  .catch(async (err) => {
+    console.error('\n💥 Fatale fout:', err.message);
+    await sendFailure('Fatale fout in news agent', err.stack || err.message).catch(() => {});
+    process.exit(1);
+  });
