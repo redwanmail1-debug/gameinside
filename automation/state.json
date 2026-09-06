@@ -1,27 +1,7 @@
 {
-  "date": "2026-09-05",
-  "publishedToday": 11,
+  "date": "2026-09-06",
+  "publishedToday": 2,
   "topics": [
-    {
-      "title": "GTA 6 Developer Reaffirms The Game’s Release Date",
-      "url": "https://insider-gaming.com/gta-6-developer-reaffirms-the-games-release-date/",
-      "date": "2026-08-29T20:55:28.987Z"
-    },
-    {
-      "title": "The Witcher 4 Will Have a Physical Edition Even if Discs Go Away, CD Projekt Red Confirms",
-      "url": "https://www.ign.com/articles/the-witcher-4-will-have-a-physical-edition-even-if-discs-go-away-cd-projekt-red-confirms",
-      "date": "2026-08-29T20:55:43.967Z"
-    },
-    {
-      "title": "GTA 6 Will Have No Microtransactions or Generative AI at Launch, Rockstar Says",
-      "url": "https://www.ign.com/articles/gta-6-will-have-no-microtransactions-or-generative-ai-at-launch-rockstar-says",
-      "date": "2026-08-30T00:20:43.673Z"
-    },
-    {
-      "title": "EA Motive's Iron Man Game Reveal 'Didn't Go as Planned,' But the Leak Has Marvel Fans More Excited Than Ever",
-      "url": "https://www.ign.com/articles/ea-motives-iron-man-game-reveal-didnt-go-as-planned-but-the-leak-has-marvel-fans-more-excited-than-ever",
-      "date": "2026-08-30T00:20:59.318Z"
-    },
     {
       "title": "I'm Obsessed with GTA 6's Next-Gen Wanted System",
       "url": "https://www.pushsquare.com/news/2026/08/im-obsessed-with-gta-6s-next-gen-wanted-system",
@@ -361,7 +341,17 @@
       "title": "GTA 6 – Everything We Know About the Most Anticipated Game Ever Made",
       "url": "https://wccftech.com/roundup/gta-6-everything-we-know/",
       "date": "2026-09-05T20:26:35.220Z"
+    },
+    {
+      "title": "The Blood of Dawnwalker Passes 1 Million Copies Sold in Just 2 Days",
+      "url": "https://www.ign.com/articles/the-blood-of-dawnwalker-passes-1-million-copies-sold-in-just-2-days",
+      "date": "2026-09-06T00:56:28.986Z"
+    },
+    {
+      "title": "Epic Games CEO Tim Sweeney Says The Industry Is Crashing And AI Is Making It Worse",
+      "url": "https://kotaku.com/epic-games-ceo-tim-sweeney-says-the-industry-is-crashing-and-ai-is-making-it-worse-2000731564",
+      "date": "2026-09-06T00:56:59.017Z"
     }
   ],
-  "varietyPublishedToday": 3
+  "varietyPublishedToday": 2
 }
